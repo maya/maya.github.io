@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Milan Records Posters
-thumbnail: /img/work/milan-records/emilie-simon-1.jpg
+thumbnail: /img/work/milan-records/emilie-simon-1-th.jpg
 image: [/img/work/milan-records/emilie-simon-1.jpg, /img/work/milan-records/emilie-simon-poster.jpg, /img/work/milan-records/mint-chicks-1.jpg]
 link: 
 tags: [design, print]

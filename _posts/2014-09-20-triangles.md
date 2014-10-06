@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Triangles
-thumbnail: /img/work/triangles/triangles-1.jpg
+thumbnail: /img/work/triangles/triangles-th.jpg
 image: [/img/work/triangles/triangles-1.jpg, /img/work/triangles/triangles-2.jpg, /img/work/triangles/triangles-3.jpg, /img/work/triangles/triangles-all-line.png, /img/work/triangles/triangles-all.png]
 link: 
 tags: [design]
