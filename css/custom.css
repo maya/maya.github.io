@@ -274,9 +274,6 @@ li:nth-child(7n+7):hover img {
 .single-project .grid {
   text-align: center;
 }
-footer.container {
-  padding: 0;
-}
 .maya-pic {
   float: left;
   padding-right: 30px;
@@ -285,10 +282,11 @@ footer.container {
 .about {
   max-width: 900px;
 }
-.about {
-font-size: 25px;
-}
 */
+
+.about {
+  font-size: 25px;
+}
 .centerBlock {
   text-align: center;
 }
@@ -333,5 +331,12 @@ font-size: 25px;
   }
   .main-nav > img {
     padding-bottom: 12px;
+  } 
+}
+
+@media all and (max-width: 414px) {
+  .maya-pic {
+    padding-bottom: 20px;
+    padding-right: 0;
   }
 }
