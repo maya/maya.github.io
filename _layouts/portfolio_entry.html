@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+</div>
+
+<section class="single-project">
+    <div class="container"> 
+      <h2 class="content">{{page.title}}</h2>
+    
+      {% for tag in page.tags %}
+      <span class="tag">{{tag}}</span>
+      {% endfor %}
+    
+      <div class="tagline"> 
+        {{ content }}
+      </div>
+
+      {% for link in page.link %}
+        <a class="project-link" href="{{link}}">View project</a>
+      {% endfor %}
+      
+    <div class="grid">      
+      
+      {% for image in page.image %}
+        <img class="work-img" src="{{image}}" />
+      {% endfor %}
+       
+    </div>
