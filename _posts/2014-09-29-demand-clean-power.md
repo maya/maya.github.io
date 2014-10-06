@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Demand Clean Power
-thumbnail: /img/work/demand-clean-power/dcp-th.jpg
+thumbnail: /img/work/demand-clean-power/dcp-th.png
 image: [/img/work/demand-clean-power/dcp-home-01.png, /img/work/demand-clean-power/dcp-home-02.jpg, /img/work/demand-clean-power/dcp-verynice-phone.jpg]
 link: http://demandcleanpower.org/
 tags: [design, development, print]
