@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Dante's Inferno
-thumbnail: /img/work/dante/dante.jpg
+thumbnail: /img/work/dante/dante-book-th.jpg
 image: [/img/work/dante/dante-photo-01.jpg, /img/work/dante/dante-pages/dante-page-text-fire.jpg]
 tags: [design, development, print]
 categories: feature
