@@ -1,3 +1,6 @@
 $(function() {
- $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+  var page =  location.pathname.split("/")[1];
+  if (page != "") {
+      $('nav a[href^="/' + page + '"]').addClass('active');
+  }
 });
