@@ -68,6 +68,9 @@ h2 {
   font-size: 28px;
   padding-bottom: 40px;
 }
+.about .big-text {
+  font-size: 28px;
+}
 .project-link {
   font-size: 28px;
 }
@@ -278,11 +281,9 @@ li:nth-child(7n+7):hover img {
   float: left;
   padding-right: 30px;
 }
-/*
-.about {
-  max-width: 900px;
+.about .container {
+  max-width: 880px;
 }
-*/
 
 .about {
   font-size: 25px;
