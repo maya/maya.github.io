@@ -11,7 +11,7 @@ body {
   border: 13px solid #fff;
   font-family: "Apercu Regular",sans-serif;
   font-size: 1.2em;
-  line-height: 1.35;
+  line-height: 1.4;
   margin: 0 auto;
 }
 img {
@@ -71,11 +71,9 @@ h2 {
 .about .big-text {
   font-size: 28px;
 }
-.project-link {
-  font-size: 28px;
-}
-.single-project .tagline {
-  padding-bottom: 0;
+
+.single-project .main-text, .project-link {
+  font-size: 1.2em;
 }
 .single-project .grid {
   padding-top: 40px;
@@ -117,8 +115,9 @@ section.contact {
 }
 
 section.contact {
-  background:         linear-gradient(90deg, #757F9A 10%, #D7DDE8 90%); /* W3C */
+  background:         linear-gradient(90deg, #757F9A 10%, #D7DDE8 90%); /* W3C 
 }
+*/
 
 /*
 section.work {
@@ -273,7 +272,7 @@ li:nth-child(7n+7):hover img {
   padding-bottom: 20px;
 }
 /* single project */
-.single-project .tagline {
+.single-project .main-text {
   padding-top: 10px;
 }
 .work-img {
@@ -286,9 +285,10 @@ li:nth-child(7n+7):hover img {
 .maya-pic {
   float: left;
   padding-right: 30px;
+  width: 310px;
 }
 .about .container {
-  max-width: 880px;
+  max-width: 780px;
 }
 
 .about {
