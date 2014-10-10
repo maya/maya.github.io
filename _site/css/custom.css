@@ -9,7 +9,7 @@
 body {
   background-color: #e6e6e6;
   border: 13px solid #fff;
-  font-family: "Apercu Regular",sans-serif;
+  font-family: 'Apercu Regular',sans-serif;
   font-size: 1.2em;
   line-height: 1.4;
   margin: 0 auto;
@@ -27,6 +27,19 @@ a:hover, .active, .single-project a:hover, .about a:hover {
 a {
   text-decoration: none;
   color: #222;
+}
+em {
+  font-style: normal;
+  font-family: 'Apercu Italic',sans-serif; 
+}
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}
+h3 {
+  font-family:  'Apercu Medium',sans-serif;  
+}
+h4, .work h3 {
+  font-family:  'Apercu Bold',sans-serif;    
 }
 h2 {
   font-size: 42px;
