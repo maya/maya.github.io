@@ -292,7 +292,7 @@ li:nth-child(7n+7):hover img {
 }
 
 .about {
-  font-size: 25px;
+  font-size: 1.2em;
 }
 .centerBlock {
   text-align: center;
@@ -338,7 +338,16 @@ li:nth-child(7n+7):hover img {
   }
   .main-nav > img {
     padding-bottom: 12px;
-  } 
+  }
+  body {
+    border-width: 10px;
+  }
+  .about .big-text {
+    font-size: 26px;
+  }
+  .about {
+    font-size: 20px;
+  }
 }
 
 @media all and (max-width: 414px) {
