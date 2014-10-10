@@ -33,7 +33,12 @@ h2 {
   font-weight: normal;
   margin-top: 0;
 }
-
+h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 3px;  
+  text-transform: uppercase;  
+}
 .header {
   padding-top: 60px;
 }
@@ -347,6 +352,9 @@ li:nth-child(7n+7):hover img {
   }
   .about {
     font-size: 20px;
+  }
+  .contact .col-1-2 {
+    padding-bottom: 28px;
   }
 }
 
