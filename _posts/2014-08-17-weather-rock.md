@@ -5,7 +5,7 @@ thumbnail: /img/work/weatherrock/wr-home-th.png
 image: [/img/work/weatherrock/wr-home.png]
 link: http://www.whatdoestheweatherrocksay.com/
 tags: [design, development]
-categories:
+categories: other
 ---
 
 ###Background / Problem:

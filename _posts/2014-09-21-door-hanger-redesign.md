@@ -5,7 +5,7 @@ thumbnail: /img/work/door-hanger/dh-home-th.png
 image: [/img/work/door-hanger/dh-badformbw.jpg, /img/work/door-hanger/dh-newform1.jpg, /img/work/door-hanger/dh-newform2.jpg, /img/work/door-hanger/dh-badcomputer.jpg, /img/work/door-hanger/dh-home.png, /img/work/door-hanger/dh-inner.png]
 link: 
 tags: [design, development]
-categories:
+categories: other
 ---
 
 **Background / Problem:**

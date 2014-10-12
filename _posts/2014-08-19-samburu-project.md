@@ -5,7 +5,7 @@ thumbnail: /img/work/samburu/samburu-poster-th.jpg
 image: [/img/work/samburu/samburu-poster-hanging.jpg, /img/work/samburu/samburu-street-mockup.jpg]
 link: 
 tags: [design, print]
-categories:
+categories: other
 ---
 
 I had the privilege to design this poster for the Samburu Project, a non-profit organization that provides easy access to clean, safe drinking water to communities throughout the Samburu District of Kenya.

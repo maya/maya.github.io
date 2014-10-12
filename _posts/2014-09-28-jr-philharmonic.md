@@ -4,7 +4,7 @@ title: Jr. Philharmonic Orchestra of California
 thumbnail: /img/work/jr-phil/jp-outside-poster-th.jpg
 image: [/img/work/jr-phil/jp-outside-poster.jpg, /img/work/jr-phil/jp-poster.jpg]
 tags: [design, print]
-categories: feature
+categories:
 ---
 
 I had the privilege to design the poster for the Jr. Philharmonic Orchestra of California 75th anniversary Diamond Jubilee concert. 

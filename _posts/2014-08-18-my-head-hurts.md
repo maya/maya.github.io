@@ -1,11 +1,12 @@
 ---
 layout: portfolio_entry
 title: My Head Hurts
+excerpt: Worked with verynice and former MVP of UCLA football player, Bryan Larimore, to develop a storytelling platform and community for people who have had head injuries.  We created something positive and supportive for an injury commonly pushed under the rug by the NFL.
 thumbnail: /img/work/myheadhurts/mhh-home-th.jpg
 image: [/img/work/myheadhurts/mhh-home.jpg, /img/work/myheadhurts/mhh-story.jpg, /img/work/myheadhurts/mhh-community.jpg]
 link: 
 tags: [development, responsive design]
-categories:
+categories: feature
 ---
 
 My Head Hurts is an online community and storytelling platform devoted to sharing people’s stories about head injuries. 

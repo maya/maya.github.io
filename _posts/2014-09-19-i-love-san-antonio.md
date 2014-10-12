@@ -5,7 +5,7 @@ thumbnail: /img/work/i-love-sa/ilsa-iphone-mockup-th.jpg
 image: [/img/work/i-love-sa/ilsa-iphone-mockup.jpg, /img/work/i-love-sa/ilsa-home.png]
 link: 
 tags: [design, development]
-categories:
+categories: other
 ---
 
 Partner, Gandhi connect, fluctuation tackling catalyst gender rights. Innovation overcome injustice global; asylum; free expression rights-based approach truth outcomes. 
