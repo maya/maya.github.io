@@ -197,7 +197,7 @@ li:nth-child(7n+2):hover a {
   color: #9a49ef;
 }
 li:nth-child(7n+3):hover a {
-  color: #dcd969;
+  color: #9a984a;
 }
 li:nth-child(7n+4):hover a {
   color: #fd9032;
@@ -227,7 +227,7 @@ li:nth-child(7n+2):hover img {
   border-bottom-color: #9a49ef;
 }
 li:nth-child(7n+3):hover img {
-  border-bottom-color: #dcd969;
+  border-bottom-color: #9a984a;
 }
 li:nth-child(7n+4):hover img {
   border-bottom-color: #fd9032;
