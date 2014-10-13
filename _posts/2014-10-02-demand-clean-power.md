@@ -4,7 +4,7 @@ title: Demand Clean Power
 excerpt: Led frontend development for a national campaign for the National Resource Defense Council that received hundreds of thousands of visits since launch. Used subtle animations to bring storytelling to life.
 thumbnail: /img/work/demand-clean-power/dcp-th.png
 image: [/img/work/demand-clean-power/dcp-home-01.png, /img/work/demand-clean-power/dcp-home-02.jpg, /img/work/demand-clean-power/dcp-verynice-phone.jpg]
-link: http://demandcleanpower.org/
+link: demandcleanpower.org
 tags: [frontend development, interaction design]
 categories: feature
 ---

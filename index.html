@@ -7,68 +7,62 @@ layout: default
 
 </div>
 
-<section class="skills">
-  <div class="container">
- 
-    <h2>Things I do</h2>
-
-    <div class="grid">
-      <div class="col-1-3">
-        <img src="img/hex.png">
-        <ul>
-          <li>Graphic designer</li>
-          <li>Frontend developer</li>
-          <li>Typography nerd</li>
-        </ul>    
-      </div>
+  <section class="work">
+      <div class="container">
     
-      <div class="col-1-3">
-        <img src="img/hex.png">
-        <ul>
-          <li>Open source tech</li>
-          <li>Code for America</li>
-          <li>Social tech volunteer</li>
-        </ul>
-      </div>
-        
-      <div class="col-1-3">
-        <img src="img/hex.png">
-        <ul>
-          <li>Design for good</li>
-          <li>Crafty and craftful</li>
-          <li>Art and code</li>
-        </ul> 
-      </div>
-    </div>
-
-  </div>       
-</section>
-
-<div class="yellow-bleed">    
-<section class="work">
-    <div class="container">
+        <h2>Recent Work</h2>
   
-      <h2>Work Selection</h2>
+        <div class="grid">
+  
+          <ul class="entries">
+            {% for post in site.categories.feature %}
+  
+            <li class="col-1-2">
+              <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+              </a>
+              {% for tag in post.tags %}
+              <span class="tag">{{tag}}</span>
+              {% endfor %}              
+            </li>
+                     
+            <li class="col-1-2">
+              <a href="{{ post.url }}">
+                <img src="{{ post.thumbnail }}" />
+              </a>
+            </li>
+           
+            {% endfor %}
+          </ul> 
+          
+          <div class="centerBlock">
+            <a class="btn" href="/work">View all projects</a>
+          </div>
+        </div>
+      
+    </div>                  
+  </section>
 
-      <div class="grid">
+<section class="more-work">
+  <div class="container">
 
-        <ul class="entries">
-          {% for post in site.categories.feature limit:4 %}
-         
-          <li class="col-1-2">
-            <a href="{{ post.url }}">
-              <img src="{{ post.thumbnail }}" />
-              <!-- <h3>{{ post.title }}</h3> -->
-            </a>
-          </li>
-         
-          {% endfor %}
-        </ul> 
-      <div class="centerBlock">
-        <a class="btn" href="/work">View all projects</a>
-      </div>
-      </div>
-    
-  </div>                  
+    <h2>More work</h2>
+  
+    <div class="grid">
+      <ul>
+        {% for post in site.categories.other %}
+            
+        <li class="col-1-4">
+          <a href="{{ post.url }}">
+            <img src="{{ post.thumbnail }}" />
+          </a>
+        </li>
+
+        {% endfor %}
+        
+      </ul>
+    </div>
+  
+  </div>
 </section>
-</div>

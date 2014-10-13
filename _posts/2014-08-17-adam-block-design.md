@@ -3,7 +3,7 @@ layout: portfolio_entry
 title: Adam Block Design
 thumbnail: /img/work/abd/ABD-th.jpg
 image: [/img/work/abd/ABD_Website.jpg, /img/work/abd/ABD_02.jpg, /img/work/abd/ABD_iPad.jpg, /img/work/abd/ABD_iPhone.jpg]
-link: http://adamblockdesign.com
+link: adamblockdesign.com
 tags: [development, responsive design]
 categories: other
 ---

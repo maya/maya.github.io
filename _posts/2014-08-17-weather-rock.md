@@ -3,7 +3,7 @@ layout: portfolio_entry
 title: What does the weather rock say?
 thumbnail: /img/work/weatherrock/wr-home-th.png
 image: [/img/work/weatherrock/wr-home.png]
-link: http://www.whatdoestheweatherrocksay.com/
+link: www.whatdoestheweatherrocksay.com
 tags: [design, development]
 categories: other
 ---

@@ -3,7 +3,7 @@ layout: portfolio_entry
 title: Louise Aronson
 thumbnail: /img/work/louise-aronson/la-home-th.png
 image: [/img/work/louise-aronson/la-home.png, /img/work/louise-aronson/la-reviews.png]
-link: http://louisearonson.com/
+link: louisearonson.com
 tags: [development]
 categories: other
 ---
