@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Project Nicaragua
-excerpt: Created the designs and developed the website for Project Nicaragua, an organization that spans university medical students and doctors to bring healthcare to underserved areas of Nicaragua.
+excerpt: Created the designs and developed the website for Project Nicaragua, an organization that spans university medical students and doctors to bring healthcare to underserved hospitals in Nicaragua.
 thumbnail: /img/work/project-nic/pn-home-th.jpg
 image: [/img/work/project-nic/pn-home.jpg]
 link: 
