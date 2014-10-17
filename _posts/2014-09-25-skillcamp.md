@@ -1,10 +1,10 @@
 ---
 layout: portfolio_entry
 title: Skillcamp
-thumbnail: /img/work/skillcamp/skillcamp-home-th.jpg
+thumbnail: /img/work/skillcamp/skillcamp-logo-th.jpg
 image: [/img/work/skillcamp/skillcamp-home.png, /img/work/skillcamp/skillcamp-lesson.jpg, /img/work/skillcamp/skillcamp-lesson-new.png]
 link: skill.camp
-tags: [frontend development, user experience design]
+tags: [frontend development, UX]
 categories: other
 ---
 
