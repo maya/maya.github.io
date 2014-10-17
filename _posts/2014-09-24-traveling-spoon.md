@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Traveling Spoon
-excerpt: Designed and developed the website for Traveling Spoon, a platform to discover authentic, vetted home food experiences in India, Thailand, and Vietnam.
+excerpt: I designed and developed the website for Traveling Spoon, a platform to discover authentic, vetted home food experiences in India, Thailand, and Vietnam.
 thumbnail: /img/work/traveling-spoon/ts-home-th.jpg
 image: [/img/work/traveling-spoon/ts-home.jpg, /img/work/traveling-spoon/ts-featured-hosts.png, /img/work/traveling-spoon/ts-host.png]
 link: travelingspoon.com

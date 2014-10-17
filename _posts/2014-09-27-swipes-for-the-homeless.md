@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Swipes for the Homeless
-excerpt: Developed the website for Swipes for the Homeless, a White House recognized organization that collects unused meal swipes from university students and delivers food to local shelters.
+excerpt: I developed the website for Swipes for the Homeless, a White House recognized organization that collects unused meal swipes from university students and delivers food to local shelters.
 thumbnail: /img/work/swipes/swipes-th.jpg
 image: [/img/work/swipes/swipes-home.png, /img/work/swipes/swipes-iphone-mockup.jpg, /img/work/swipes/swipes-swipeouthunger.png]
 link: swipesforthehomeless.org

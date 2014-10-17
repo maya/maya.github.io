@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: World Affairs Council of Brazil
-excerpt: Led Brazilian and US teams to design and develop a new web presence for the World Affairs Council of Brazil, engaging and educating Brazilians of all ages about Brazilian issues of the times.
+excerpt: I led the Brazilian and US teams to design and develop a new web presence for the World Affairs Council of Brazil, engaging and educating Brazilians of all ages about Brazilian issues of the times.
 thumbnail: /img/work/caib/caib-home-th.jpg
 image: [/img/work/caib/caib-home-wide.jpg]
 link: caibbrasil.org

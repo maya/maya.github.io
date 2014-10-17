@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Lasting Actions
-excerpt: Designed and developed the website for Lasting Actions, an organization dedicated to providing children around the world access to education and technology.
+excerpt: I designed and developed the website for Lasting Actions, an organization dedicated to providing children around the world access to education and technology.
 thumbnail: /img/work/lasting-actions/la-home-th.png
 image: [/img/work/lasting-actions/la-home.png, /img/work/lasting-actions/la-inner.jpg]
 link: lastingactions.org

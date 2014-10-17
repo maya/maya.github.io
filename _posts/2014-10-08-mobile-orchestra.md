@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Mobile Orchestra
-excerpt: Created Mobile Orchestra to represent with sound moving bike groups, like Critical Mass. Loops from Jono Brandel’s Patatap stream into the group as bikers enter the group.
+excerpt: I created Mobile Orchestra to represent with sound moving bike groups, like Critical Mass. Loops from Jono Brandel’s Patatap stream into the group as bikers enter the group.
 thumbnail: /img/work/mobile-orchestra/mo-jamming-2-th.png
 image: [/img/work/mobile-orchestra/mo-home.jpg, /img/work/mobile-orchestra/mo-jamming-1.png, /img/work/mobile-orchestra/mo-jamming-3.png, /img/work/mobile-orchestra/mo-clouds.jpg]
 link: 
