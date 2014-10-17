@@ -196,25 +196,25 @@ section {
 
 /* link colors */
 
-li:nth-child(7n+1):hover a {
+li:nth-child(7n+1) a:hover {
   color: #45abf2;
 }
-li:nth-child(7n+2):hover a {
+li:nth-child(7n+2) a:hover {
   color: #9a49ef;
 }
-li:nth-child(7n+3):hover a {
+li:nth-child(7n+3) a:hover {
   color: #9a984a;
 }
-li:nth-child(7n+4):hover a {
+li:nth-child(7n+4) a:hover {
   color: #fd9032;
 }
-li:nth-child(7n+5):hover a {
+li:nth-child(7n+5) a:hover {
   color: #f2436d;
 }
-li:nth-child(7n+6):hover a {
-  color: #6ec79c;
+li:nth-child(7n+6) a:hover {
+  color: #2e9664;
 }
-li:nth-child(7n+7):hover a {
+li:nth-child(7n+7) a:hover {
   color: #2d3291;
 }
 
@@ -226,26 +226,30 @@ li:nth-child(7n+7):hover a {
 .entries img:hover {
   border-bottom-color: #45abf2;
 }
-li:nth-child(7n+1):hover img {
+li:nth-child(7n+1) img:hover {
   border-bottom-color: #45abf2;
 }
-li:nth-child(7n+2):hover img {
+li:nth-child(7n+2) img:hover {
   border-bottom-color: #9a49ef;
 }
-li:nth-child(7n+3):hover img {
+li:nth-child(7n+3) img:hover {
   border-bottom-color: #9a984a;
 }
-li:nth-child(7n+4):hover img {
+li:nth-child(7n+4) img:hover {
   border-bottom-color: #fd9032;
 }
-li:nth-child(7n+5):hover img {
+li:nth-child(7n+5) img:hover {
   border-bottom-color: #f2436d;
 }
-li:nth-child(7n+6):hover img {
+li:nth-child(7n+6) img:hover {
   border-bottom-color: #6ec79c;
 }
-li:nth-child(7n+7):hover img {
+li:nth-child(7n+7) img:hover {
   border-bottom-color: #2d3291;
+}
+
+li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
+  border-bottom-color: #45abf2;
 }
 
 /* make a grid */
