@@ -123,6 +123,12 @@ ul {
     ); 
   border-top-right-radius: 100px; 
 }
+.work h3 {
+  margin-top: .2em;
+}
+.work h2 {
+  margin-bottom: 1em;
+}
 
 /*
 section.contact {
@@ -287,7 +293,7 @@ li:nth-child(7n+7):hover img {
   width: 100%;
 }
 .work .col-1-2 {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 /* single project */
 .single-project .main-text {
@@ -331,6 +337,9 @@ li:nth-child(7n+7):hover img {
   .work-img {
       width: 100%;
     }
+  .work .col-1-2 {
+  padding-bottom: 20px;
+  }  
 }
 
 @media all and (max-width: 560px) {

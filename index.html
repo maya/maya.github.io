@@ -17,7 +17,7 @@ layout: default
           <ul class="entries">
             {% for post in site.categories.feature %}
   
-            <li class="col-1-2">
+            <li class="col-1-2 col-1">
               <a href="{{ post.url }}">
                 <h3>{{ post.title }}</h3>
                 <p>{{ post.excerpt }}</p>
@@ -27,7 +27,7 @@ layout: default
               {% endfor %}              
             </li>
                      
-            <li class="col-1-2">
+            <li class="col-1-2 col-2">
               <a href="{{ post.url }}">
                 <img src="{{ post.thumbnail }}" />
               </a>
