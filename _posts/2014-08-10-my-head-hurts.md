@@ -6,7 +6,7 @@ thumbnail: /img/work/myheadhurts/mhh-home-th.jpg
 image: [/img/work/myheadhurts/mhh-home.jpg, /img/work/myheadhurts/mhh-story.jpg, /img/work/myheadhurts/mhh-community.jpg]
 link: myheadhurts.co
 tags: [development, responsive design]
-categories: feature
+categories: other
 ---
 
 My Head Hurts is an online community and storytelling platform devoted to sharing people’s stories about head injuries. 

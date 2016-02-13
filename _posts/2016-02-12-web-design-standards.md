@@ -1,0 +1,18 @@
+---
+layout: portfolio_entry
+title: Draft U.S. Web Design Standards
+excerpt: I work as a frontend developer on the Draft U.S. Web Design Standards, which are available to the public and promote consistent, cohesive federal websites.
+thumbnail: /img/work/uswds/uswds-th.png
+image: [/img/work/uswds/home.png, /img/work/uswds/colors.png]
+link: playbook.cio.gov/designstandards/
+tags: [frontend development, design systems]
+categories: feature
+---
+
+A collaboration between USDS and 18F, the U.S. Web Design Standards are the U.S. government’s very own set of common UI components and visual styles for websites. I worked as a frontend developer on the project. We designed this resource to make things easier for government designers and developers, while raising the bar on what the American people can expect from their digital experiences.
+
+We wanted to create a single reference point for developers in need of common patterns, providing the building blocks of code for teams to assemble websites. Our goal was to build a system of components shaped by modern best practices in front-end development and government accessibility standards.
+
+We built the UI components on a solid HTML foundation, progressively enhanced to provide core experiences across browsers. All of the code is 508 compliant, so it’s accessible to everyone. Our styles are written with Sass and can be used as a Sass library or included directly as compiled CSS. In order to make sure our code was easy to read and easy to pick up, it had to look like it was written from a single voice. After speaking with dozens of front-end developers and designers in government, we sought to strike a balance between modular CSS and code that’s clean and easy-to-use.
+
+Read more on the [blog](https://18f.gsa.gov/2015/09/28/web-design-standards/).

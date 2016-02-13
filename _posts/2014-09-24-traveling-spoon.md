@@ -6,7 +6,7 @@ thumbnail: /img/work/traveling-spoon/ts-home-th.jpg
 image: [/img/work/traveling-spoon/ts-home.jpg, /img/work/traveling-spoon/ts-featured-hosts.png, /img/work/traveling-spoon/ts-host.png]
 link: travelingspoon.com
 tags: [design, development]
-categories: feature
+categories: other
 ---
 
 Traveling Spoon is an online marketplace that connects travelers with vetted, local and authentic food experiences — from homemade meals to cooking classes — in people’s homes around the world.
