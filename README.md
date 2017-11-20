@@ -1,2 +1,2 @@
-#Maya Benari
-This is my fresh, new site. I built this using Jekyll.
+# Maya Benari
+This is my fresh, new site. Built with Jekyll.
