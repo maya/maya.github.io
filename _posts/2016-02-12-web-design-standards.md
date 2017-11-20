@@ -1,10 +1,10 @@
 ---
 layout: portfolio_entry
-title: Draft U.S. Web Design Standards
-excerpt: I work as a frontend developer on the Draft U.S. Web Design Standards, which are available to the public and promote consistent, cohesive federal websites.
+title: U.S. Web Design Standards
+excerpt: I work as a frontend developer on the U.S. Web Design Standards, which are available to the public and promote consistent, cohesive federal websites.
 thumbnail: /img/work/uswds/uswds-th.png
 image: [/img/work/uswds/home.png, /img/work/uswds/colors.png]
-link: playbook.cio.gov/designstandards/
+link: standards.usa.gov
 tags: [frontend development, design systems]
 categories: feature
 ---
