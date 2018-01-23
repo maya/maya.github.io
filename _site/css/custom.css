@@ -30,16 +30,16 @@ a {
 }
 em {
   font-style: normal;
-  font-family: 'Apercu Italic',sans-serif; 
+  font-family: 'Apercu Italic',sans-serif;
 }
 h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 h3 {
-  font-family:  'Apercu Medium',sans-serif;  
+  font-family:  'Apercu Medium',sans-serif;
 }
 h4, .work h3 {
-  font-family:  'Apercu Bold',sans-serif;    
+  font-family:  'Apercu Bold',sans-serif;
 }
 h2 {
   font-size: 42px;
@@ -49,8 +49,8 @@ h2 {
 h4 {
   font-size: 12px;
   letter-spacing: 2px;
-  margin-bottom: 3px;  
-  text-transform: uppercase;  
+  margin-bottom: 3px;
+  text-transform: uppercase;
 }
 .header {
   padding-top: 60px;
@@ -109,8 +109,8 @@ ul {
   background-image:
     linear-gradient(
       #ecf59c, #eceec7
-    ); 
-  border-top-left-radius: 100px; 
+    );
+  border-top-left-radius: 100px;
 }
 .yellow-bleed {
   background-color: #eceec7;
@@ -120,8 +120,8 @@ ul {
   background-image:
     linear-gradient(
       #37fc7b, #c1edde
-    ); 
-  border-top-right-radius: 100px; 
+    );
+  border-top-right-radius: 100px;
 }
 .work h3 {
   margin-top: .2em;
@@ -139,7 +139,7 @@ section.contact {
 }
 
 section.contact {
-  background:         linear-gradient(90deg, #757F9A 10%, #D7DDE8 90%); /* W3C 
+  background:         linear-gradient(90deg, #757F9A 10%, #D7DDE8 90%); /* W3C
 }
 */
 
@@ -167,7 +167,7 @@ section.work {
       #dedede, #e6e6e6
     );
   background-color: rgba(0, 0, 0, 0.03);
-  border-top-right-radius: 100px; 
+  border-top-right-radius: 100px;
 }
 section {
   padding: 60px 0;
@@ -188,7 +188,7 @@ section {
   border-radius: 4px;
   margin-right: 4px;
   padding: 2px 6px;
-  text-transform: capitalize;  
+  text-transform: capitalize;
 }
 .more-work img {
   padding-bottom: 20px;
@@ -264,12 +264,12 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
 }
 .grid {
   margin-left: -10px;
-  margin-right: -10px;  
+  margin-right: -10px;
 }
 [class*='col-'] {
   padding-left: 10px;
   padding-right: 10px;
-}    
+}
 .col-1-2 {
   width: 50%;
 }
@@ -322,6 +322,20 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
 .about {
   font-size: 1.2em;
 }
+
+.about ul {
+  list-style-type: square;
+  padding-left: 1em;
+}
+
+.about li {
+  margin-bottom: 0.5em;
+}
+
+.skills li {
+  margin-bottom: 0.5em;
+}
+
 .centerBlock {
   text-align: center;
 }
@@ -343,7 +357,7 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
     }
   .work .col-1-2 {
   padding-bottom: 20px;
-  }  
+  }
 }
 
 @media all and (max-width: 560px) {
@@ -360,7 +374,7 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
   .main-nav {
     text-align: left;
     padding-bottom: 40px;
-  }  
+  }
   .header {
     padding-top: 22px;
   }
