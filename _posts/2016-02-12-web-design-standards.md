@@ -1,15 +1,15 @@
 ---
 layout: portfolio_entry
-title: U.S. Web Design Standards
-excerpt: I work as a frontend developer on the U.S. Web Design Standards, which are available to the public and promote consistent, cohesive federal websites.
+title: U.S. Web Design System
+excerpt: I work as a front-end developer on the U.S. Web Design System, which are available to the public and promote consistent, cohesive federal websites.
 thumbnail: /img/work/uswds/uswds-th.png
 image: [/img/work/uswds/home.png, /img/work/uswds/colors.png]
-link: standards.usa.gov
+link: designsystem.digital.gov
 tags: [frontend development, design systems]
 categories: feature
 ---
 
-A collaboration between USDS and 18F, the U.S. Web Design Standards are the U.S. government’s very own set of common UI components and visual styles for websites. I worked as a frontend developer on the project. We designed this resource to make things easier for government designers and developers, while raising the bar on what the American people can expect from their digital experiences.
+A collaboration between the U.S. Digital Service and 18F, the U.S. Web Design System is the U.S. government’s very own set of common UI components and visual styles for websites. I work as a front-end developer on the project. We designed this resource to make things easier for government designers and developers, while raising the bar on what the American people can expect from their digital experiences.
 
 We wanted to create a single reference point for developers in need of common patterns, providing the building blocks of code for teams to assemble websites. Our goal was to build a system of components shaped by modern best practices in front-end development and government accessibility standards.
 
