@@ -3,7 +3,7 @@ layout: portfolio_entry
 title: Skillcamp
 thumbnail: /img/work/skillcamp/skillcamp-logo-th.jpg
 image: [/img/work/skillcamp/skillcamp-home.png, /img/work/skillcamp/skillcamp-lesson.jpg, /img/work/skillcamp/skillcamp-lesson-new.png]
-link: skill.camp
+link: github.com/codeforamerica/skillcamp
 tags: [frontend development, UX]
 categories: other
 ---
