@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: U.S. Web Design System
-excerpt: I work as a front-end developer on the U.S. Web Design System, which are available to the public and promote consistent, cohesive federal websites.
+excerpt: I work as a product manager, designer, and developer on the U.S. Web Design System, a design system for the federal government which are available to the public to promote consistent, accessible federal websites.
 thumbnail: /img/work/uswds/uswds-th.png
 image: [/img/work/uswds/home.png, /img/work/uswds/colors.png]
 link: designsystem.digital.gov
