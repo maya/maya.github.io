@@ -5,14 +5,14 @@ layout: default
 </div>
 
 <section class="single-project">
-    <div class="container"> 
+    <div class="container">
       <h2 class="content">{{page.title}}</h2>
-    
+
       {% for tag in page.tags %}
       <span class="tag">{{tag}}</span>
       {% endfor %}
-    
-      <div class="main-text"> 
+
+      <div class="main-text">
         {{ content }}
       </div>
 
@@ -20,11 +20,11 @@ layout: default
         <h4>View project</h4>
         <a class="project-link" href="http://{{link}}">{{link}}</a>
       {% endfor %}
-      
-    <div class="grid">      
-      
+
+    <div class="grid">
+
       {% for image in page.image %}
-        <img class="work-img" src="{{image}}" />
+        <img class="work-img" src="{{image}}" alt="" />
       {% endfor %}
-       
+
     </div>
