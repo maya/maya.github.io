@@ -9,15 +9,15 @@ layout: default
 
   <section class="work">
       <div class="container">
-    
+
         <h2>Work</h2>
-  
+
         <div class="grid">
-  
+
           <ul class="entries">
-          
+
             {% for post in site.categories.feature %}
-            
+
             <li class="col-1-2">
               <a href="{{ post.url }}">
                 <h3>{{ post.title }}</h3>
@@ -25,46 +25,46 @@ layout: default
               </a>
               {% for tag in post.tags %}
               <span class="tag">{{tag}}</span>
-              {% endfor %}              
+              {% endfor %}
             </li>
-                     
+
             <li class="col-1-2">
               <a href="{{ post.url }}">
-                <img src="{{ post.thumbnail }}" />
+                <img src="{{ post.thumbnail }}" alt="" />
               </a>
             </li>
             {% endfor %}
-          </ul> 
+          </ul>
 
-<!-- Remove "view all projects" button         
+<!-- Remove "view all projects" button
           <div class="centerBlock">
             <a class="btn" href="/work">View all projects</a>
           </div>
--->           
+-->
         </div>
-     
-    </div>                  
+
+    </div>
   </section>
 
 <section class="more-work">
   <div class="container">
 
     <h2>More work</h2>
-  
+
     <div class="grid">
       <ul>
         {% for post in site.categories.other %}
-            
+
         <li class="col-1-4">
           <a href="{{ post.url }}">
-            <img src="{{ post.thumbnail }}" />
+            <img src="{{ post.thumbnail }}" alt="" />
           </a>
         </li>
 
         {% endfor %}
-        
+
       </ul>
     </div>
-  
+
   </div>
 </section>
