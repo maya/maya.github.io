@@ -5,7 +5,7 @@ excerpt: I work as a product manager, designer, and developer on the U.S. Web De
 thumbnail: /img/work/uswds/uswds-th.png
 image: [/img/work/uswds/home.png, /img/work/uswds/colors.png]
 link: designsystem.digital.gov
-tags: [frontend development, design systems]
+tags: [front-end development, design systems]
 categories: feature
 ---
 
