@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: Demand Clean Power
-excerpt: I led frontend development for a national campaign for the National Resource Defense Council that received hundreds of thousands of visits at launch. By using subtle animations, we were able to bring storytelling elements to life and engage users to sign the petition rejecting the Keystone XL pipeline.
+excerpt: I led front-end development for a national campaign for the National Resource Defense Council that received hundreds of thousands of visits at launch. By using subtle animations, we were able to bring storytelling elements to life and engage users to sign the petition rejecting the Keystone XL pipeline.
 thumbnail: /img/work/demand-clean-power/dcp-th.png
 image: [/img/work/demand-clean-power/dcp-home-01.png, /img/work/demand-clean-power/dcp-home-02.jpg, /img/work/demand-clean-power/dcp-verynice-phone.jpg]
 link: demandcleanpower.org
