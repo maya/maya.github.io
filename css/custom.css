@@ -8,7 +8,7 @@
 
 body {
   background-color: #e6e6e6;
-  border: 13px solid #fff;
+  /* border: 13px solid #fff; */
   font-family: 'Apercu Regular',sans-serif;
   font-size: 1.2em;
   line-height: 1.4;
@@ -101,7 +101,7 @@ ul {
   padding-left: 0;
 }
 .skills img {
-  width: 48%;
+  width: 18%;
   padding-bottom: 30px;
 }
 .skills {
@@ -116,11 +116,11 @@ ul {
   background-color: #eceec7;
 }
 .work {
-  background-color: #37fc7b;
+  /* background-color: #dedede; */
   background-image:
-    linear-gradient(
-      #37fc7b, #c1edde
-    );
+  linear-gradient(
+    #dedede, #e6e6e6
+  );
   border-top-right-radius: 100px;
 }
 .work h3 {
@@ -196,22 +196,22 @@ section {
 /* link colors */
 
 li:nth-child(7n+1) a:hover {
-  color: #45abf2;
+  color: #9a49ef;
 }
 li:nth-child(7n+2) a:hover {
   color: #9a49ef;
 }
 li:nth-child(7n+3) a:hover {
-  color: #9a984a;
-}
-li:nth-child(7n+4) a:hover {
-  color: #fd9032;
-}
-li:nth-child(7n+5) a:hover {
   color: #f2436d;
 }
+li:nth-child(7n+4) a:hover {
+  color: #f2436d;
+}
+li:nth-child(7n+5) a:hover {
+  color: #2d3291;
+}
 li:nth-child(7n+6) a:hover {
-  color: #2e9664;
+  color: #2d3291;
 }
 li:nth-child(7n+7) a:hover {
   color: #2d3291;
@@ -235,13 +235,13 @@ li:nth-child(7n+3) img:hover {
   border-bottom-color: #9a984a;
 }
 li:nth-child(7n+4) img:hover {
-  border-bottom-color: #fd9032;
+  border-bottom-color: #f2436d;
 }
 li:nth-child(7n+5) img:hover {
   border-bottom-color: #f2436d;
 }
 li:nth-child(7n+6) img:hover {
-  border-bottom-color: #6ec79c;
+  border-bottom-color: #2d3291;
 }
 li:nth-child(7n+7) img:hover {
   border-bottom-color: #2d3291;
@@ -402,4 +402,13 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
     padding-bottom: 20px;
     padding-right: 0;
   }
+}
+
+.ro {
+  width: 2.5em;
+  height: 2.5em;
+  background: linear-gradient(to bottom, rgba(41,58,186,1) 0%, rgba(41,58,186,1) 4%, rgba(68,40,121,1) 7%, rgba(219,73,180,1) 19%, rgba(237,113,233,1) 47%, rgba(219,73,180,1) 58%, rgba(68,40,121,1) 64%, rgba(41,58,186,1) 65%, rgba(68,40,121,1) 66%, rgba(247,145,169,1) 68%, rgba(226,74,94,1) 98%, rgba(41,58,186,1) 100%);
+  /* box-shadow: inset -3px 3px 13px 18px rgb(244 245 239); */
+
+  border-radius: 100px;
 }
