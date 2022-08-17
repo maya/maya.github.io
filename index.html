@@ -2,69 +2,68 @@
 layout: default
 ---
 <div class="tagline">
-  <p>I’m a designer with a passion for usable and accessible design, building design systems, and growing a culture of inclusive design. I love thinking about design that scales to make the world a better place.</p>
+  <p>I’m a designer with a passion for usable and accessible design, building design systems, and growing a culture of inclusive design.</p>
 </div>
-
 </div>
-
-  <section class="work">
-      <div class="container">
-
-        <h2>Work</h2>
-
-        <div class="grid">
-
-          <ul class="entries">
-
-            {% for post in site.categories.feature %}
-
-            <li class="col-1-2">
-              <a href="{{ post.url }}">
-                <h3>{{ post.title }}</h3>
-                <p>{{ post.excerpt }}</p>
-              </a>
-              {% for tag in post.tags %}
-              <span class="tag">{{tag}}</span>
-              {% endfor %}
-            </li>
-
-            <li class="col-1-2">
-              <a href="{{ post.url }}">
-                <img src="{{ post.thumbnail }}" alt="" />
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-
-<!-- Remove "view all projects" button
-          <div class="centerBlock">
-            <a class="btn" href="/work">View all projects</a>
-          </div>
--->
-        </div>
-
-    </div>
-  </section>
-
-<section class="more-work">
+<section class="work">
   <div class="container">
-
-    <h2>More work</h2>
-
+    <h2>Work</h2>
     <div class="grid">
-      <ul>
-        {% for post in site.categories.other %}
-
-        <li class="col-1-4">
+      <ul class="entries">
+        {% for post in site.categories.feature %}
+        <li class="col-1-2">
+          <a href="{{ post.url }}">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt }}</p>
+          </a>
+          {% for tag in post.tags %}
+          <span class="tag">{{tag}}</span>
+          {% endfor %}
+        </li>
+        <li class="col-1-2">
           <a href="{{ post.url }}">
             <img src="{{ post.thumbnail }}" alt="" />
           </a>
         </li>
-
         {% endfor %}
-
       </ul>
     </div>
+  </div>
+</section>
+</section>
 
+<section class="skills">
+  <div class="container">
+
+    <h2>Who I've worked with</h2>
+
+    <div class="grid">
+      <div class="col-1-3">
+        <img src="/img/hex.png">
+        <ul>
+          <li>CDC</li>
+          <li>HHS</li>
+          <li>NIH</li>
+        </ul>
+      </div>
+
+      <div class="col-1-3">
+        <img src="/img/hex.png">
+        <ul>
+          <li>Space Force</li>
+          <li>U.S. Air Force</li>
+          <li>City of San Antonio</li>
+        </ul>
+      </div>
+
+      <div class="col-1-3">
+        <img src="/img/hex.png">
+        <ul>
+          <li>ClinicalTrials.gov</li>
+          <li>vote.gov</li>
+          <li>Natural Resources Defense Council</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

@@ -6,7 +6,7 @@ thumbnail: /img/work/caib/caib-home-th.jpg
 image: [/img/work/caib/caib-home-wide.jpg]
 link: caibbrasil.org
 tags: [project lead, development]
-categories: feature
+categories: other
 ---
 
 I had the privilege to lead the USA & Brazil teams to launch a new web presence for CAIB, “Conselho de Assuntos Internacionais do Brasil,” which has enabled the organization to reach out to a global community connected to Brazil and Brazilian Issues.
