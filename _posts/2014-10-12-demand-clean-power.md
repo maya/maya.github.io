@@ -6,7 +6,7 @@ thumbnail: /img/work/demand-clean-power/dcp-th.png
 image: [/img/work/demand-clean-power/dcp-home-01.png, /img/work/demand-clean-power/dcp-home-02.jpg, /img/work/demand-clean-power/dcp-verynice-phone.jpg]
 # link: demandcleanpower.org
 tags: [front-end development, interaction design]
-categories: feature
+categories: other
 ---
 
 Demand Clean Power is a national campaign by the Natural Resources Defense Council and Robert Redford to tell President Obama to reject the Keystone XL pipeline and promote clean energy instead. It attracted hundreds of thousands of visits at launch.
