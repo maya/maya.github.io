@@ -1,81 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>  Homebase |  Maya Benari </title>
-    <meta name="description" content="Maya Benari is a designer who’s passionate about usable and accessible design, building design systems, and inclusive design.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-      crossorigin="anonymous"></script>
-    <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-25533001-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-  </head>
-  <body>
-
-    <div class="container">
-
-      <div class="grid header">
-
-        <div class="logo col-1-3">
-          <a href="/">
-            <!-- <div class="ro"></div> -->
-            <!-- <img src="/img/logo.png" alt=""> -->
-            <p>Maya Benari</p>
-          </a>
-        </div>
-
-        <nav id="main-nav" class="main-nav col-2-3">
-          <!-- <img src="/img/dots.jpg" alt="">
-          <br> -->
-          <a href="/about">About</a>
-          <a class="navlink-contact" href="/contact">Contact</a>
-        </nav>
-      </div>
-
-      </div>
-
-<section class="single-project">
-    <div class="container">
-      <h2 class="content">Homebase</h2>
-
-      
-      <span class="tag">design</span>
-      
-      <span class="tag">development</span>
-      
-      <span class="tag">branding</span>
-      
-      <span class="tag">strategy</span>
-      
-
-      <div class="main-text">
-        <p>With an easy step-by-step online process, we reshaped how the city provides services and empowered residents to own the city they live in.</p>
+I"j<p>With an easy step-by-step online process, we reshaped how the city provides services and empowered residents to own the city they live in.</p>
 
 <h3 id="the-problem">The Problem</h3>
 
 <p>San Antonio is 296 years old. It is home to many old neighborhoods in various states of revitalization. The homes and businesses in these neighborhoods face significant structural and visual problems, like crumbling foundations, leaking roofs and busted floors.</p>
 
-<p><em>Difficulty accessing grants and incentives</em></p>
+<p><strong>Difficulty accessing grants and incentives</strong></p>
 
 <p>There are many financial incentives available to property owners to improve their homes and offices/retail spaces. These grants have complex eligibility rules and are administered by a number of different organizations. It’s an opaque process that frustrates users.</p>
 
@@ -110,28 +39,4 @@
 <p>Our key metric to test our app against is improving the number of home repair permits applied for in the core downtown area. This area is home to challenged neighborhoods, some in states of deep disrepair.</p>
 
 <p>This metric was set forth by SA2020 as part of their Neighborhoods cause area, which is focused on improving the housing stock in San Antonio’s urban core and making the whole city a great place to live.</p>
-
-      </div>
-
-      
-        <h4>View project</h4>
-        <a class="project-link" href="http://homebasefix.com">homebasefix.com</a>
-      
-
-    <div class="grid">
-
-      
-        <img class="work-img" src="/img/work/homebase/homebase-bizcards.jpg" alt="" />
-      
-        <img class="work-img" src="/img/work/homebase/homebase-mockup.jpg" alt="" />
-      
-
-    </div>
-
-      <footer class="container">
-        <p>&copy; Maya Benari | All Rights Reserved. </p>
-      </footer>
-
-
-  </body>
-</html>
+:ET
