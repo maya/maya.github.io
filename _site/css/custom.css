@@ -293,6 +293,7 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
   overflow:auto;
 }
 .work [class*='col-'] img {
+  border-radius: 10px;
   width: 100%;
 }
 .work .col-1-2 {
@@ -310,7 +311,7 @@ li:nth-child(7n+1) a:hover + li:nth-child(7n+1) img {
   text-align: center;
 }
 .maya-pic {
-  border-radius: 30px;
+  border-radius: 10px;
   float: left;
   margin-bottom: 1rem;
   margin-right: 30px;
