@@ -214,34 +214,40 @@ li:nth-child(7n+6) a:hover {
   color: #2d3291;
 }
 li:nth-child(7n+7) a:hover {
-  color: #2d3291;
+  color: #1a4480;
 }
 
 /* image bottom border colors */
 
 .entries img {
   border-bottom: 4px solid transparent;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  padding-top: 2px;
 }
 .entries img:hover {
   border-bottom-color: #45abf2;
+  opacity: .9;
+  transform: translateY(-2px);
 }
+
 li:nth-child(7n+1) img:hover {
-  border-bottom-color: #45abf2;
+  border-bottom-color: #aacdec;
 }
 li:nth-child(7n+2) img:hover {
-  border-bottom-color: #d83933;
+  border-bottom-color: #f7bbb1;
 }
 li:nth-child(7n+3) img:hover {
   border-bottom-color: #9a984a;
 }
 li:nth-child(7n+4) img:hover {
-  border-bottom-color: #00bde3;
+  border-bottom-color: #97d4ea;
 }
 li:nth-child(7n+5) img:hover {
   border-bottom-color: #f2436d;
 }
 li:nth-child(7n+6) img:hover {
-  border-bottom-color: #9983FC;
+  border-bottom-color: #d5bfff;
 }
 li:nth-child(7n+7) img:hover {
   border-bottom-color: #2d3291;
