@@ -2,6 +2,7 @@
 layout: portfolio_entry
 title: SimpleReport
 excerpt: I focused on continually improving the tool by refreshing the landing site, making sign-up easier, building out the mobile patient experience, and implementing a React component library in Storybook and visual regression tooling.
+tagline: Developing a fast and easy way for COVID-19 test facilities to report results to public health departments.
 thumbnail: /img/work/simplereport/simplereport.png
 image: [/img/work/simplereport/simplereport.png]
 link: simplereport.gov
@@ -16,6 +17,7 @@ I focused on continually improving the tool by:
 - Building out the app’s mobile experience
 - Redesigning the account creation, login, and password reset experience to massively speed up the onboarding process
 - Building a React component library in Storybook and visual regression tooling with Chromatic for a COVID test reporting app with the CDC.
+{: .list}
 
 Read more in the project case study: [Modernizing COVID-19 testing and reporting in non-traditional healthcare settings](https://skylight.digital/work/experience/cdc-simplereport/)
 

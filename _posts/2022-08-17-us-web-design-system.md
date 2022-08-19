@@ -2,12 +2,16 @@
 layout: portfolio_entry
 title: U.S. Web Design System
 excerpt: I worked as a product manager, designer, and developer on the U.S. Web Design System, a design system for the federal government used by hundreds of agency projects.
+tagline: Making it easy for government agencies to build fast and accessible websites through a design system.
 thumbnail: /img/work/uswds/home.png
 image: [/img/work/uswds/home.png]
 link: designsystem.digital.gov
 tags: [design systems, front-end development]
 categories: feature
 ---
+
+{{ page.excerpt }}
+{: .about }
 
 A collaboration between the U.S. Digital Service and 18F, the U.S. Web Design System is the U.S. government’s very own set of common UI components and visual styles for websites. I work as a front-end developer on the project. We designed this resource to make things easier for government designers and developers, while raising the bar on what the American people can expect from their digital experiences.
 
