@@ -1,3 +1,4 @@
+{% comment %}
 ---
 layout: default
 title: Contact
@@ -7,3 +8,4 @@ title: Contact
   <section class="subtle contact">
 
   </section>
+{% endcomment %}
