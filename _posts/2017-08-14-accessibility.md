@@ -2,7 +2,7 @@
 layout: portfolio_entry
 title: Accessibility for Teams
 excerpt: I led the research and development of a role-based accessibility guide now used as part of 18F’s onboarding and referenced by industry leaders. Partnered with government accessibility leaders to ensure project buy-in.
-tagline: Created a role-based accessibility guide adopted across federal teams, making accessibility easier to implement across design, engineering, and product workflows.
+tagline: Defined and launched a role-based accessibility guide to drive org-wide adoption across federal teams—bridging gaps between design, engineering, and product practice.
 thumbnail: /img/work/accessibility/accessibility.png
 image: [/img/work/accessibility/accessibility.png, /img/work/accessibility/accessibility-visual.png]
 link: accessibility.digital.gov
