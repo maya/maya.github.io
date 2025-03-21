@@ -2,7 +2,7 @@
 layout: portfolio_entry
 title: U.S. Web Design System
 excerpt: I worked as a product manager, designer, and developer on the U.S. Web Design System, a design system for the federal government used by hundreds of agency projects.
-tagline: Led front-end design and helped shape architecture and system strategy as a core contributor. Now used by 90+ agencies and powering over 1 billion annual page views across federal websites.
+tagline: Led front-end design and helped shape system architecture and long-term strategy as a core contributor, driving adoption across 90+ agencies and over 1 billion page views annually.
 thumbnail: /img/work/uswds/home.png
 image: [/img/work/uswds/home.png]
 link: designsystem.digital.gov
