@@ -6,7 +6,7 @@ tagline: Built a React component library that enabled 25+ states to report COVID
 thumbnail: /img/work/simplereport/simplereport.png
 image: [/img/work/simplereport/simplereport.png]
 link: simplereport.gov
-tags: [UX design, component library]
+tags: [component library, UX design]
 categories: feature
 ---
 
