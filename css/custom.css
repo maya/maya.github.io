@@ -52,6 +52,9 @@ h4 {
   margin-bottom: 3px;
   text-transform: uppercase;
 }
+.text-sm {
+  font-size: 1.2rem;
+}
 .header {
   padding-top: 60px;
 }
