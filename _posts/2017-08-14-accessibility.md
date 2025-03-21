@@ -6,7 +6,7 @@ tagline: Created a role-based accessibility guide adopted across federal teams, 
 thumbnail: /img/work/accessibility/accessibility.png
 image: [/img/work/accessibility/accessibility.png, /img/work/accessibility/accessibility-visual.png]
 link: accessibility.digital.gov
-tags: [product lead]
+tags: [accessibility, product leadership, design ops]
 categories: feature
 ---
 
