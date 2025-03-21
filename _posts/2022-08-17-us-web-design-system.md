@@ -6,7 +6,7 @@ tagline: Led front-end design and helped shape architecture, accessibility stand
 thumbnail: /img/work/uswds/home.png
 image: [/img/work/uswds/home.png]
 link: designsystem.digital.gov
-tags: [design systems, front-end development]
+tags: [design systems, front-end architecture, product strategy]
 categories: feature
 ---
 
