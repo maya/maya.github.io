@@ -22,6 +22,7 @@ categories: feature
 - Patient feedback improved around clarity and privacy in pre-screening; health departments saw more complete data submission.  
 - The refined mobile experience increased engagement among mobile users.  
 - Developer speed and quality improved thanks to a shared component library + regression tooling — fewer UI bugs, faster iterations.  
+{: .list}
 
 ### Learn More
 - [Modernizing COVID-19 testing and reporting in non-traditional healthcare settings](https://skylight.digital/work/experience/cdc-simplereport/)
