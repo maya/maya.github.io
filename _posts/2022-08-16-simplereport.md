@@ -27,5 +27,5 @@ categories: feature
 - Developer speed and quality improved thanks to a shared component library + regression tooling — fewer UI bugs, faster iterations.  
 {: .list}
 
-### Learn More
+### Learn more
 - [Modernizing COVID-19 testing and reporting in non-traditional healthcare settings](https://skylight.digital/work/experience/cdc-simplereport/)
