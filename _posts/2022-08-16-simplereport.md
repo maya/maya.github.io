@@ -10,6 +10,9 @@ tags: [component library, UX design]
 categories: feature
 ---
 
+{{ page.excerpt }}
+{: .about }
+
 ### What I did
 - Refreshed the landing page to clearly communicate what SimpleReport offers, making it easier for testing sites to understand and sign up.  
 - Improved the mobile user interface to ensure good usability on mobile devices.  
