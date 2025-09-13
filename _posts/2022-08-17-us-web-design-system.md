@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: U.S. Web Design System
-excerpt: I worked as a product manager, designer, and developer on the U.S. Web Design System, a design system for the federal government used by hundreds of agency projects.
+excerpt: I led design, product, and front-end development for the U.S. Web Design System — the shared UI and style framework now used by **hundreds** of federal agency projects nationwide. My work focused on raising standards for user experience, accessibility, and consistency in government digital services.
 tagline: Led front-end design and helped shape system architecture and long-term strategy as a core contributor, driving adoption across 90+ agencies and over 1 billion page views annually.
 thumbnail: /img/work/uswds/home.png
 image: [/img/work/uswds/home.png]
@@ -13,10 +13,22 @@ categories: feature
 {{ page.excerpt }}
 {: .about }
 
-A collaboration between the U.S. Digital Service and 18F, the U.S. Web Design System is the U.S. government’s very own set of common UI components and visual styles for websites. I work as a front-end developer on the project. We designed this resource to make things easier for government designers and developers, while raising the bar on what the American people can expect from their digital experiences.
+### What I did
 
-We wanted to create a single reference point for developers in need of common patterns, providing the building blocks of code for teams to assemble websites. Our goal was to build a system of components shaped by modern best practices in front-end development and government accessibility standards.
+- Designed and developed a robust set of common UI components built on a solid HTML foundation, enhanced with Sass, to ensure modular, maintainable front-end code.  
+- Ensured full **[Section 508 compliance](https://www.section508.gov/)** and progressive enhancement so the system works across browsers and for all users.  
+- Created documentation, style guidelines, and developer-friendly patterns to help teams adopt the system quickly and correctly.  
+- Collaborated with multiple government agencies and front-end designers/developers to balance modular CSS with usability, maintainability, and consistency.  
 
-We built the UI components on a solid HTML foundation, progressively enhanced to provide core experiences across browsers. All of the code is 508 compliant, so it’s accessible to everyone. Our styles are written with Sass and can be used as a Sass library or included directly as compiled CSS. In order to make sure our code was easy to read and easy to pick up, it had to look like it was written from a single voice. After speaking with dozens of front-end developers and designers in government, we sought to strike a balance between modular CSS and code that’s clean and easy-to-use.
+### Outcomes & impact
 
-Read my [case study on Smashing Magazine](https://www.smashingmagazine.com/2017/10/large-scale-design-system-us-government/) and how we [evolved the system to version 2.0](https://designsystem.digital.gov/whats-new/updates/2019/04/08/introducing-uswds-2-0/).
+- Widely adopted by dozens of federal agencies, leading to significant reductions in duplicate work and maintenance costs.  
+- Improved accessibility and usability across federal websites, making digital services more inclusive.  
+- Contributed to the launch of **[USWDS 2.0](https://designsystem.digital.gov/whats-new/updates/2019/04/08/uswds-2-0-release/)**, with enhancements to modularity, flexibility, and design maturity.  
+- Made it easier for government design teams to hit the ground running — accelerating front-end development time and raising the baseline of public digital experience.  
+
+### Learn more
+
+- Read my [case study on Smashing Magazine](https://www.smashingmagazine.com/2017/03/building-us-web-design-standards/) → deep dive into process and challenges.  
+- See how the system [evolved in USWDS 2.0](https://designsystem.digital.gov/whats-new/updates/2019/04/08/uswds-2-0-release/) → updates, new patterns, and improvements.  
+- [View the live design system project](https://designsystem.digital.gov/) → explore usage, components, design guidelines, and more.
