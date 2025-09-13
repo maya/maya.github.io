@@ -5,7 +5,7 @@ excerpt: I led the research and development of a role-based accessibility guide 
 tagline: Defined and launched a role-based accessibility guide to drive org-wide adoption across federal teams—bridging gaps between design, engineering, and product practice.
 thumbnail: /img/work/accessibility/accessibility.png
 image: [/img/work/accessibility/accessibility.png, /img/work/accessibility/accessibility-visual.png]
-link: accessibility.digital.gov
+link: digital.gov/guides/accessibility-for-teams
 tags: [accessibility, product leadership, design ops]
 categories: feature
 ---
