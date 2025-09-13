@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: SimpleReport
-excerpt: When COVID-19 testing expanded into non-traditional settings, SimpleReport needed to be fast, usable, and trustworthy — for both health departments and patients. I worked across design, UX, and front-end tooling to make that happen.
+excerpt: When COVID-19 testing expanded into non-traditional settings, SimpleReport needed to be fast, usable, and trustworthy — for both health departments and patients. I worked across design, UX, and front-end tooling to deliver on that goal.
 tagline: Built a React component library that enabled 25+ states to report COVID-19 test results, accelerating development during a national health response.
 thumbnail: /img/work/simplereport/simplereport.png
 image: [/img/work/simplereport/simplereport.png]
