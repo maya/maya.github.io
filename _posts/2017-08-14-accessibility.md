@@ -15,12 +15,14 @@ categories: feature
 - Defined clear roles and responsibilities for accessibility across the product lifecycle (design, development, content, QA) so everyone understands their role in ensuring accessibility.
 - Authored guidance content, templates, checklists, and training materials to support the front-end development role — making the guide usable in day-to-day work.
 - Collaborated with Section 508 accessibility leaders to ensure the guide aligned with existing mandates and had visibility / buy-in across stakeholder groups.
+{: .list}
 
 ### Outcomes & impact
 - The guide was adopted as part of official onboarding at GSA, embedding accessibility awareness early in team workflows.
 - Teams report improved clarity on who is responsible for what, reducing overlap and missed obligations.  
 - Facilitated better compliance with Section 508 standards.
 - Helped shift culture: accessibility became less of an afterthought and more of a shared priority among all roles.
+{: .list}
 
 ### Why it matters
 Accessibility isn’t only a legal or technical requirement — it’s a path to more inclusive, usable products. By defining roles clearly and integrating practices early, teams can avoid expensive retrofits, reduce misunderstandings, and deliver better experiences for everyone.
@@ -28,3 +30,4 @@ Accessibility isn’t only a legal or technical requirement — it’s a path to
 ### Learn more
 - [Full Case Study: Introducing Accessibility for Teams](https://preserved.org.uk/18f.gsa.gov/2018/07/10/introducing-accessibility-for-teams/index.html)  
 - [Accessibility for Teams on Section508.gov](https://www.section508.gov/blog/Introducing-Accessibility-for-Teams/)  
+{: .list}
