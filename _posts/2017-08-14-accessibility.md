@@ -10,6 +10,9 @@ tags: [accessibility, product leadership, design ops]
 categories: feature
 ---
 
+{{ page.excerpt }}
+{: .about }
+
 ### What I did
 - Conducted stakeholder interviews, accessibility audits, and workshops across GSA to identify knowledge gaps and common challenges faced by designers, developers, content authors, and project managers.  
 - Defined clear roles and responsibilities for accessibility across the product lifecycle (design, development, content, QA) so everyone understands their role in ensuring accessibility.
