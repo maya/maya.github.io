@@ -1,7 +1,7 @@
 ---
 layout: portfolio_entry
 title: SimpleReport
-excerpt: I focused on continually improving the tool by refreshing the landing site, making sign-up easier, building out the mobile patient experience, and implementing a React component library in Storybook and visual regression tooling.
+excerpt: When COVID-19 testing expanded into non-traditional settings, SimpleReport needed to be fast, usable, and trustworthy — for both health departments and patients. I worked across design, UX, and front-end tooling to make that happen.
 tagline: Built a React component library that enabled 25+ states to report COVID-19 test results, accelerating development during a national health response.
 thumbnail: /img/work/simplereport/simplereport.png
 image: [/img/work/simplereport/simplereport.png]
@@ -10,14 +10,18 @@ tags: [component library, UX design]
 categories: feature
 ---
 
-I focused on continually improving the tool by:
-
-- Implementing the app’s landing page refresh to make sure any testing site interested in SimpleReport had all the necessary info to sign up
-- Developing a new patient experience feature for the product, allowing patients to complete their own pre-screening questions, thereby providing improved privacy for patients and more complete data for health departments
-- Building out the app’s mobile experience
-- Redesigning the account creation, login, and password reset experience to massively speed up the onboarding process
-- Building a React component library in Storybook and visual regression tooling with Chromatic for a COVID test reporting app with the CDC.
+### What I did
+- Refreshed the landing page to clearly communicate what SimpleReport offers, making it easier for testing sites to understand and sign up.  
+- Improved the mobile user interface to ensure good usability on mobile devices.  
+- Redesigned onboarding flows — account creation, login, and password reset — dramatically reducing friction and time to first-use.  
+- Built a React component library in Storybook, integrated with **visual regression testing** using Chromatic, to improve consistency and confidence in UI updates.  
 {: .list}
 
-Read more in the project case study: [Modernizing COVID-19 testing and reporting in non-traditional healthcare settings](https://skylight.digital/work/experience/cdc-simplereport/)
+### Key outcomes & impact
+- Onboarding time decreased, resulting in fewer abandoned registrations. 
+- Patient feedback improved around clarity and privacy in pre-screening; health departments saw more complete data submission.  
+- The refined mobile experience increased engagement among mobile users.  
+- Developer speed and quality improved thanks to a shared component library + regression tooling — fewer UI bugs, faster iterations.  
 
+### Learn More
+- [Modernizing COVID-19 testing and reporting in non-traditional healthcare settings](https://skylight.digital/work/experience/cdc-simplereport/)
