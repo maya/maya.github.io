@@ -20,7 +20,7 @@ img {
 .single-project a, .project-link, .about a {
   border-bottom: 2px dashed #c3c3c3;
 }
-.single-project ul {
+.single-project ul, .single-project p:not(.about) {
     max-width: 760px;
 }
 a:hover, .active, .single-project a:hover, .about a:hover {
