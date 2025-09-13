@@ -19,6 +19,7 @@ categories: feature
 - Ensured full **[Section 508 compliance](https://www.section508.gov/)** and progressive enhancement so the system works across browsers and for all users.  
 - Created documentation, style guidelines, and developer-friendly patterns to help teams adopt the system quickly and correctly.  
 - Collaborated with multiple government agencies and front-end designers/developers to balance modular CSS with usability, maintainability, and consistency.  
+{: .list}
 
 ### Outcomes & impact
 
@@ -26,9 +27,10 @@ categories: feature
 - Improved accessibility and usability across federal websites, making digital services more inclusive.  
 - Contributed to the launch of **[USWDS 2.0](https://designsystem.digital.gov/whats-new/updates/2019/04/08/uswds-2-0-release/)**, with enhancements to modularity, flexibility, and design maturity.  
 - Made it easier for government design teams to hit the ground running — accelerating front-end development time and raising the baseline of public digital experience.  
+{: .list}
 
 ### Learn more
 
 - Read my [case study on Smashing Magazine](https://www.smashingmagazine.com/2017/03/building-us-web-design-standards/) → deep dive into process and challenges.  
 - See how the system [evolved in USWDS 2.0](https://designsystem.digital.gov/whats-new/updates/2019/04/08/uswds-2-0-release/) → updates, new patterns, and improvements.  
-- [View the live design system project](https://designsystem.digital.gov/) → explore usage, components, design guidelines, and more.
+{: .list}
