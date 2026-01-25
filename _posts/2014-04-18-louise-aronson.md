@@ -6,6 +6,8 @@ image: [/img/work/louise-aronson/la-home.png, /img/work/louise-aronson/la-review
 link: louisearonson.com
 tags: [development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 I led development on a website for writer and doctor, Louise Aronson. I utilized Advanced Custom Fields, a WordPress plugin, to ensure the client has a easy and usable method of updating and adding in new content. I love this method because clients begin to feel like they *own* their website, without fear of messing it up.
