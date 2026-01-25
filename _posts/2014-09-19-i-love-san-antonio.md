@@ -6,6 +6,8 @@ image: [/img/work/i-love-sa/ilsa-iphone-mockup.jpg, /img/work/i-love-sa/ilsa-hom
 link: www.ilovesanantonio.org
 tags: [design, development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 I Love San Antonio is a public space to talk about everything that makes San Antonio a great place to live. Residents can post their musings about the Alamo City anonymously or sign them publicly with a twitter handle. The app encourages keeping responses short, so they can be tweeted out later by people who agree with the sentiment.

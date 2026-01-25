@@ -7,6 +7,8 @@ image: [/img/work/swipes/swipes-home.png, /img/work/swipes/swipes-iphone-mockup.
 link: swipesforthehomeless.org
 tags: [development, responsive design]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 Swipes for the Homeless is a non-profit organization consisting of a coalition of university and college chapters located throughout the world. Their mission is to tangibly and tactically partner with college campuses to alleviate hunger while raising young people’s awareness of homelessness and hunger through education and outreach.

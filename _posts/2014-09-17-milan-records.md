@@ -6,6 +6,8 @@ image: [/img/work/milan-records/emilie-simon-1.jpg, /img/work/milan-records/emil
 link: 
 tags: [design, print]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 This is a collection of posters I created for musical artists for Milan Records. Emilie Simone's concert at the Roxy Theatre in Los Angeles and advertisment for the Mint Chicks debut US album.

@@ -7,6 +7,8 @@ image: [/img/work/lasting-actions/la-home.png, /img/work/lasting-actions/la-inne
 link: lastingactions.org
 tags: [design, development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 Lasting Actions aims to provide access to technology for poor children, giving them the chance to have great futures. Currently assisting children in Ethiopia, Brazil, the Philippines and the Dominican Republic, the organization’s team and projects extend five continents.

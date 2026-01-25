@@ -6,6 +6,8 @@ image: [/img/work/nykc/nykc-imac-mockup.jpg, /img/work/nykc/nykc-shop.jpg, /img/
 link: 
 tags: [development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 I developed an eCommerce site for a New York based kiteboarding company.

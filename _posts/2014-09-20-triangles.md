@@ -6,6 +6,8 @@ image: [/img/work/triangles/triangles-1.jpg, /img/work/triangles/triangles-2.jpg
 link: 
 tags: [design]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 For the Code for America midyear presentation, Beta, designers were asked to riff off of a triangle. These are some fun triangles I created to explore geometric expression, minimalism, and space. I created a range of simple, swiss-styled to multi-layered pieces.

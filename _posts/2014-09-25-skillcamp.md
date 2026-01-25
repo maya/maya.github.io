@@ -6,6 +6,8 @@ image: [/img/work/skillcamp/skillcamp-home.png, /img/work/skillcamp/skillcamp-le
 link: github.com/codeforamerica/skillcamp
 tags: [front-end development, UX]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 Skillcamp is a learning space that helps navigate you through civic technology training.

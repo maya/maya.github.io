@@ -7,6 +7,8 @@ image: [/img/work/logo-human-rights/hr-logo.jpg, /img/work/logo-human-rights/hr-
 link:
 tags: [design, branding, logo]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 There is no universally recognized logo for Human Rights. This was a global initiative to change that by creating a universal symbol for human rights. With over 15,000 submissions from more than 190 countries, the impact and outreach of the initiative exceeded all expectations.

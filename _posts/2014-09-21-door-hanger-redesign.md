@@ -6,6 +6,8 @@ image: [/img/work/door-hanger/dh-badformbw.jpg, /img/work/door-hanger/dh-newform
 link: 
 tags: [design, development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 **Background / Problem:**

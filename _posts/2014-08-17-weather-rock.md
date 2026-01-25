@@ -6,6 +6,8 @@ image: [/img/work/weatherrock/wr-home.png]
 link: www.whatdoestheweatherrocksay.com
 tags: [design, development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 ###Background / Problem:

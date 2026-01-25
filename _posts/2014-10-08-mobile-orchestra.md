@@ -7,6 +7,8 @@ image: [/img/work/mobile-orchestra/mo-home.jpg, /img/work/mobile-orchestra/mo-ja
 link:
 tags: [design, development]
 categories: other
+sitemap: false
+noindex: true
 ---
 
 Mobile Orchestra is a way to visualize bikers in Critical Mass. We forked Jono Brandel’s [Patatap](http://patatap.com) and created music loops from it that are associated with a person. As each person enters the bike group, a piece of their music loop gets played, as they leave, it gets removed. This creates a live, sonic representation of music. I also created the beats.
