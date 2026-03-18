@@ -120,7 +120,31 @@
   }
   .nav-links a:hover { color: var(--wildfire); }
 
-  /* ─── HERO ───────────────────────────────────────────── */
+  /* Hamburger button — hidden on desktop */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.25s, opacity 0.25s;
+    transform-origin: center;
+  }
+  /* Open state */
+  .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   #hero {
     padding-top: 120px;
     padding-bottom: 0;
@@ -843,8 +867,34 @@
   }
 
   @media (max-width: 600px) {
-    .nav-links { gap: 20px; }
+    /* Nav — hamburger on mobile */
+    nav { padding: 16px 20px; flex-wrap: wrap; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      font-size: 13px;
+      margin-top: 12px;
+      border-top: 1px solid var(--sand-dark);
+      padding-top: 8px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--sand-dark); }
+    .nav-links li a {
+      display: block;
+      padding: 14px 0;
+      color: var(--ink-mid);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+    }
+
+    /* Hero */
+    #hero { padding-top: 80px; }
+    .hero-inner { padding: 40px 20px 0; }
     .hero-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .hero-eyebrow { font-size: 10px; letter-spacing: 0.1em; }
   }
 </style>
 </head>
@@ -857,6 +907,9 @@
 <header>
 <nav>
   <a href="#" class="nav-wordmark">Maya <span>Benari</span></a>
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
@@ -1011,10 +1064,10 @@
           <a href="https://www.smashingmagazine.com/2017/10/large-scale-design-system-us-government" target="_blank" class="about-link">
             Smashing Magazine <span>Article →</span>
           </a>
-          <a href="http://clarityconf.com/people/maya-benari" target="_blank" class="about-link">
+          <a href="https://clarityconf.com/people/maya-benari" target="_blank" class="about-link">
             Clarity Conference <span>Talk →</span>
           </a>
-          <a href="http://shoptalkshow.com/episodes/209-with-maya-benari-and-hillary-hartley/" target="_blank" class="about-link">
+          <a href="https://shoptalkshow.com/episodes/209-with-maya-benari-and-hillary-hartley/" target="_blank" class="about-link">
             ShopTalk Show <span>Podcast →</span>
           </a>
           <a href="https://raw.githubusercontent.com/maya/maya.github.io/master/assets/netmag-interview.png" target="_blank" class="about-link">
@@ -1185,8 +1238,22 @@
 
   reveals.forEach(el => observer.observe(el));
 
-  // Nav scroll tint
-  const nav = document.querySelector('nav');
+  // Hamburger menu toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
   window.addEventListener('scroll', () => {
     nav.style.boxShadow = window.scrollY > 40
       ? '0 1px 24px rgba(28,26,23,0.08)'
