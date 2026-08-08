@@ -1,1306 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BCFQ918KE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9BCFQ918KE');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maya Benari — Design Systems</title>
-<meta name="description" content="Maya Benari builds design systems as decision-making infrastructure for complex product organizations. She is one of the creators of the U.S. Web Design System.">
-<link rel="canonical" href="https://maya-benari.com/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Maya Benari — Design Systems">
-<meta property="og:description" content="Design systems that make product decisions legible at scale.">
-<meta property="og:url" content="https://maya-benari.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://maya-benari.com/img/MayaBenari-portrait.jpg">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Maya Benari — Design Systems">
-<meta name="twitter:description" content="Design systems that make product decisions legible at scale.">
-<meta name="twitter:image" content="https://maya-benari.com/img/MayaBenari-portrait.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-
-<style>
-  /* ─── TOKENS ─────────────────────────────────────────── */
-  :root {
-    --sand:        #F5F0E8;
-    --sand-mid:    #EDE7DA;
-    --sand-dark:   #D6CCBA;
-    --wildfire:    #C4501A;
-    --wildfire-text: #BA4B18;
-    --wildfire-lt: #D96B38;
-    --chaparral:   #5E6B54;
-    --chaparral-lt:#A3B494;
-    --ink:         #1C1A17;
-    --ink-mid:     #3D3A34;
-    --ink-muted:   #726D61;
-    --white:       #FDFAF5;
-
-    --font-display: 'Spectral', Georgia, serif;
-    --font-body:    'DM Sans', system-ui, sans-serif;
-
-    --max-w: 1140px;
-    --gutter: clamp(24px, 5vw, 64px);
-  }
-
-  /* Skip link */
-  .skip-link {
-    position: absolute;
-    top: -100%;
-    left: 16px;
-    background: var(--ink);
-    color: var(--white);
-    padding: 8px 16px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 2px;
-    z-index: 9999;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 16px; }
-
-  /* ─── RESET ──────────────────────────────────────────── */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--sand);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  img { display: block; max-width: 100%; }
-  a { color: inherit; text-decoration: none; }
-
-  /* ─── LAYOUT HELPERS ─────────────────────────────────── */
-  .container {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 0 var(--gutter);
-  }
-
-  /* ─── NAV ────────────────────────────────────────────── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 20px var(--gutter);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(245, 240, 232, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(196, 80, 26, 0.1);
-  }
-  .nav-wordmark {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    color: var(--ink);
-  }
-  .nav-wordmark span { color: var(--wildfire-text); }
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  .nav-links a {
-    color: var(--ink-muted);
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--wildfire); }
-
-  /* Hamburger button — hidden on desktop */
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    width: 32px;
-    height: 32px;
-  }
-  .nav-toggle span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background: var(--ink);
-    transition: transform 0.25s, opacity 0.25s;
-    transform-origin: center;
-  }
-  /* Open state */
-  .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-  #hero {
-    padding-top: 120px;
-    padding-bottom: 0;
-    min-height: 92vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: end;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Subtle texture overlay */
-  #hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(196, 80, 26, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 20% 80%, rgba(122, 140, 110, 0.08) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .hero-inner {
-    padding: 80px var(--gutter) 0;
-    max-width: var(--max-w);
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: end;
-  }
-
-  .hero-text { padding-bottom: 80px; }
-
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--wildfire-text);
-    margin-bottom: 28px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.1s forwards;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 1px;
-    background: var(--wildfire-text);
-  }
-
-  .hero-name {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(52px, 7vw, 88px);
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-    margin-bottom: 8px;
-    opacity: 0;
-    animation: fadeUp 0.9s 0.2s forwards;
-  }
-  .hero-name em {
-    font-style: italic;
-    color: var(--wildfire);
-  }
-
-  .hero-tagline {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(18px, 2.4vw, 26px);
-    line-height: 1.35;
-    color: var(--ink-mid);
-    margin-bottom: 36px;
-    max-width: 420px;
-    opacity: 0;
-    animation: fadeUp 0.9s 0.35s forwards;
-  }
-
-  .hero-desc {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--ink-muted);
-    max-width: 400px;
-    margin-bottom: 44px;
-    opacity: 0;
-    animation: fadeUp 0.9s 0.45s forwards;
-  }
-
-  .hero-cta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.9s 0.55s forwards;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 28px;
-    font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all 0.25s;
-    cursor: pointer;
-    border: none;
-  }
-  .btn-primary {
-    background: var(--wildfire-text);
-    color: var(--white);
-  }
-  .btn-primary:hover {
-    background: var(--wildfire);
-    transform: translateY(-1px);
-  }
-  .btn-ghost {
-    background: transparent;
-    color: var(--ink-mid);
-    border: 1px solid var(--sand-dark);
-  }
-  .btn-ghost:hover {
-    border-color: var(--ink-mid);
-    color: var(--ink);
-    transform: translateY(-1px);
-  }
-
-  /* Hero image side */
-  .hero-image-col {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeIn 1.1s 0.6s forwards;
-  }
-  .hero-portrait-frame {
-    position: relative;
-    width: 340px;
-    max-width: 100%;
-  }
-  .hero-portrait-frame::before {
-    content: '';
-    position: absolute;
-    top: -20px; right: -20px;
-    width: 100%; height: 100%;
-    border: 1px solid rgba(196, 80, 26, 0.25);
-    border-radius: 2px;
-    z-index: 0;
-  }
-  .hero-portrait-frame img {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 2px;
-    background: linear-gradient(160deg, #EDE7DA 0%, #D6CCBA 100%);
-  }
-
-
-  /* Hero bottom bar */
-  .hero-bar {
-    margin-top: 60px;
-    border-top: 1px solid var(--sand-dark);
-    padding: 24px var(--gutter);
-    max-width: var(--max-w);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeIn 0.8s 0.9s forwards;
-  }
-  .hero-bar-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    white-space: nowrap;
-  }
-  .hero-bar-orgs {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .hero-bar-org {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink-mid);
-    opacity: 0.7;
-    letter-spacing: 0.02em;
-    transition: opacity 0.2s;
-  }
-  .hero-bar-org:hover { opacity: 1; }
-
-  /* ─── SECTION COMMON ─────────────────────────────────── */
-  section { padding: 100px 0; }
-
-  .section-header {
-    margin-bottom: 64px;
-  }
-  .section-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--chaparral);
-    margin-bottom: 16px;
-  }
-  .section-eyebrow::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 1px;
-    background: var(--chaparral);
-  }
-  .section-title {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(36px, 4vw, 52px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--ink);
-  }
-  .section-title em {
-    font-style: italic;
-    color: var(--wildfire);
-  }
-
-  /* ─── WORK ───────────────────────────────────────────── */
-  #work { background: var(--ink); }
-  #work .section-eyebrow { color: var(--wildfire-lt); }
-  #work .section-eyebrow::before { background: var(--wildfire-lt); }
-  #work .section-title { color: var(--sand); }
-  #work .section-title em { color: var(--wildfire-lt); }
-
-  .work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px;
-  }
-
-  .work-card {
-    display: flex;
-    flex-direction: column;
-    background: #161412;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .work-card:hover { background: #1e1b18; }
-
-  .work-card--featured {
-    grid-column: span 2;
-  }
-
-  /* Image area */
-  .work-card-inner {
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .work-card-img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: center 55%;
-    display: block;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    filter: saturate(0.95);
-  }
-  .work-card--featured .work-card-img {
-    aspect-ratio: 21/9;
-    object-position: center 55%;
-  }
-  .work-card:hover .work-card-img {
-    transform: scale(1.02);
-    filter: saturate(1);
-  }
-
-  /* Placeholder for missing images */
-  .work-card-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 64px;
-    color: rgba(255,255,255,0.06);
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .work-card--featured .work-card-placeholder { aspect-ratio: 21/9; }
-  .work-card:hover .work-card-placeholder { transform: scale(1.02); }
-
-  /* Info panel — always visible, below image */
-  .work-card-overlay {
-    padding: 24px 28px 28px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .work-meta-bar {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-  }
-  .work-meta-scope {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--wildfire-lt);
-  }
-  .work-meta-divider {
-    font-size: 10px;
-    color: rgba(255,255,255,0.2);
-  }
-  .work-meta-role {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-
-  .work-card-title {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(20px, 2vw, 26px);
-    line-height: 1.15;
-    color: var(--sand);
-    margin-bottom: 12px;
-    transition: color 0.2s;
-  }
-  .work-card:hover .work-card-title { color: var(--white); }
-
-  .work-meta-impact {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    color: rgba(245,240,232,0.5);
-    padding-top: 12px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .work-meta-role-line {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 10px;
-  }
-
-  .work-card-request {
-    display: block;
-    margin-top: 10px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--wildfire-lt);
-  }
-  .work-card-desc {
-    font-size: 13px;
-    line-height: 1.65;
-    color: rgba(245,240,232,0.5);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
-    opacity: 0;
-    margin-top: 0;
-  }
-  .work-card:hover .work-card-desc {
-    max-height: 120px;
-    opacity: 1;
-    margin-top: 12px;
-  }
-
-  /* Arrow — now in info panel */
-  .work-card-arrow {
-    display: none;
-  }
-  .work-card:hover .work-card-arrow {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  /* Fallback when no image loads */
-  .work-card-placeholder {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 64px;
-    color: rgba(255,255,255,0.08);
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .work-card--featured .work-card-placeholder {
-    aspect-ratio: 21/9;
-  }
-  .work-card:hover .work-card-placeholder {
-    transform: scale(1.03);
-  }
-
-  /* ─── ABOUT ──────────────────────────────────────────── */
-  #about {
-    background: var(--sand);
-  }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .about-left {}
-  .about-portrait {
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 2px;
-    background: linear-gradient(160deg, #EDE7DA 0%, #D6CCBA 100%);
-    margin-bottom: 28px;
-  }
-  .about-portrait-placeholder {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background: linear-gradient(160deg, var(--sand-mid), var(--chaparral-lt));
-    border-radius: 2px;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 64px;
-    color: rgba(255,255,255,0.5);
-  }
-  .about-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .about-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--sand-dark);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--ink-mid);
-    transition: color 0.2s;
-  }
-  .about-link:hover { color: var(--wildfire); }
-  .about-link span { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
-
-  .about-right {}
-  .about-bio {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(20px, 2.2vw, 26px);
-    line-height: 1.45;
-    color: var(--ink);
-    margin-bottom: 28px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--sand-dark);
-    font-style: italic;
-  }
-  .about-body {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--ink-muted);
-    margin-bottom: 48px;
-  }
-  .about-body strong {
-    color: var(--ink);
-    font-weight: 500;
-  }
-  .hero-desc-2 { margin-top: -24px; }
-  .hero-tagline em {
-    font-style: italic;
-    color: var(--wildfire);
-  }
-  .about-body p + p { margin-top: 1em; }
-
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 48px;
-  }
-  .expertise-item {
-    padding: 20px 24px;
-    background: var(--white);
-    border: 1px solid var(--sand-dark);
-    border-radius: 2px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .expertise-item:hover {
-    border-color: var(--chaparral-lt);
-    box-shadow: 0 4px 16px rgba(28,26,23,0.06);
-  }
-  .expertise-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--chaparral);
-    margin-bottom: 8px;
-  }
-  .expertise-list {
-    list-style: none;
-    font-size: 13px;
-    color: var(--ink-mid);
-    line-height: 1.8;
-  }
-
-  /* ─── WRITING ─────────────────────────────────────────── */
-  #writing {
-    background: var(--sand-mid);
-  }
-  .writing-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .writing-item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 32px;
-    align-items: center;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--sand-dark);
-    transition: background 0.2s, padding 0.2s;
-    cursor: pointer;
-  }
-  .writing-item:first-child { border-top: 1px solid var(--sand-dark); }
-  .writing-item:hover { background: var(--sand); margin: 0 -24px; padding: 24px 24px; }
-
-  .writing-num {
-    font-family: var(--font-display);
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--sand-dark);
-    width: 28px;
-    letter-spacing: 0.04em;
-  }
-  .writing-content {}
-  .writing-arrow {
-    font-size: 18px;
-    color: var(--sand-dark);
-    transition: color 0.2s, transform 0.2s;
-  }
-  .writing-item:hover .writing-arrow {
-    color: var(--wildfire);
-    transform: translateX(4px);
-  }
-  .writing-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 4px;
-    line-height: 1.35;
-  }
-  .writing-meta {
-    font-size: 12px;
-    color: #6C675A;
-    letter-spacing: 0.04em;
-  }
-  .writing-item:hover .writing-title { color: var(--wildfire-text); }
-
-  /* ─── SPEAKING ────────────────────────────────────────── */
-  #speaking {
-    background: var(--ink);
-    color: var(--sand);
-  }
-  #speaking .section-eyebrow { color: var(--wildfire-lt); }
-  #speaking .section-eyebrow::before { background: var(--wildfire-lt); }
-  #speaking .section-title { color: var(--sand); }
-
-  .speaking-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-  }
-  .speaking-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 32px;
-    transition: background 0.2s, border-color 0.2s;
-    text-decoration: none;
-    display: block;
-    cursor: default;
-  }
-  a.speaking-card {
-    cursor: pointer;
-  }
-  .speaking-card:hover,
-  a.speaking-card:hover {
-    background: rgba(196, 80, 26, 0.1);
-    border-color: rgba(196, 80, 26, 0.3);
-  }
-  .speaking-type {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--wildfire-lt);
-    margin-bottom: 16px;
-  }
-  .speaking-venue {
-    font-family: var(--font-display);
-    font-size: 20px;
-    font-weight: 300;
-    color: var(--sand);
-    margin-bottom: 8px;
-    line-height: 1.25;
-  }
-  .speaking-detail {
-    font-size: 13px;
-    color: rgba(245,240,232,0.5);
-  }
-
-  /* ─── FOOTER ─────────────────────────────────────────── */
-  footer {
-    background: var(--ink);
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 48px var(--gutter);
-  }
-  .footer-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-  .footer-wordmark {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: 16px;
-    color: rgba(245,240,232,0.6);
-    letter-spacing: 0.01em;
-  }
-  .footer-wordmark span { color: var(--wildfire-lt); }
-  .footer-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.5);
-  }
-  .footer-links a:hover { color: var(--sand); }
-  .footer-copy {
-    font-size: 12px;
-    color: rgba(245,240,232,0.5);
-    letter-spacing: 0.04em;
-  }
-  .footer-social {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  .footer-social-link {
-    color: rgba(245,240,232,0.5);
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-  }
-  .footer-social-link:hover { color: var(--sand); }
-
-  /* ─── ANIMATIONS ─────────────────────────────────────── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  /* Scroll reveal */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-
-  /* ─── RESPONSIVE ─────────────────────────────────────── */
-  @media (max-width: 900px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: 48px;
-    }
-    .hero-image-col { display: none; }
-    .work-grid { grid-template-columns: 1fr; }
-    .work-card--featured { grid-column: span 1; }
-    .work-card--featured .work-card-img,
-    .work-card--featured .work-card-placeholder { aspect-ratio: 16/9; }
-    .about-grid { grid-template-columns: 1fr; }
-    .about-left { max-width: 320px; }
-    .speaking-grid { grid-template-columns: 1fr; }
-    .expertise-grid { grid-template-columns: 1fr; }
-    .writing-item { grid-template-columns: auto 1fr auto; gap: 16px; }
-  }
-
-  @media (max-width: 600px) {
-    /* Nav — hamburger on mobile */
-    nav { padding: 16px 20px; flex-wrap: wrap; }
-    .nav-toggle { display: flex; }
-    .nav-links {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-      gap: 0;
-      font-size: 13px;
-      margin-top: 12px;
-      border-top: 1px solid var(--sand-dark);
-      padding-top: 8px;
-    }
-    .nav-links.open { display: flex; }
-    .nav-links li { border-bottom: 1px solid var(--sand-dark); }
-    .nav-links li a {
-      display: block;
-      padding: 14px 0;
-      color: var(--ink-mid);
-      font-size: 14px;
-      letter-spacing: 0.06em;
-    }
-
-    /* Hero */
-    #hero { padding-top: 80px; }
-    .hero-inner { padding: 40px 20px 0; }
-    .hero-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .hero-eyebrow { font-size: 10px; letter-spacing: 0.1em; }
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maya Benari designs systems that make product decisions legible at scale." />
+  <title>Maya Benari — Design Systems & UI Infrastructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#top">maya benari</a>
+      <nav aria-label="Primary">
+        <a href="#work">work</a>
+        <a href="#about">about</a>
+        <a href="#writing">writing</a>
+        <a href="#speaking">speaking</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">contact</a>
+      </nav>
+    </header>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- ─── NAV ───────────────────────────────────────────── -->
-<header>
-<nav>
-  <a href="#" class="nav-wordmark">Maya <span>Benari</span></a>
-  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="https://www.linkedin.com/in/mayab/" target="_blank">Contact</a></li>
-  </ul>
-</nav>
-</header>
-
-<!-- ─── HERO ──────────────────────────────────────────── -->
-<main id="main-content">
-<section id="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-eyebrow">Design Systems & UI Infrastructure</div>
-      <h1 class="hero-name">Maya<br>Benari</h1>
-      <p class="hero-tagline">Design systems that make<br>product decisions <em>legible at scale.</em></p>
-      <p class="hero-desc">
-        I design and lead systems that shape how teams build, decide, and scale products. From launching the U.S. Web Design System to enterprise platforms, my work turns design systems into operational infrastructure across complex organizations.
-      </p>
-      <div class="hero-cta">
-        <a href="#work" class="btn btn-primary">View Work ↓</a>
-        <a href="#about" class="btn btn-ghost">About Me</a>
-      </div>
-    </div>
-
-    <div class="hero-image-col">
-      <div class="hero-portrait-frame">
-        <img
-          src="assets/mb-photo.png"
-          alt="Maya Benari"
-          
-        >
-        <div class="hero-portrait-placeholder" style="display:none; width:100%; aspect-ratio:3/4; background:linear-gradient(160deg,#EDE7DA,#A3B494); border-radius:2px; align-items:center; justify-content:center; font-family:Spectral,serif; font-size:64px; color:rgba(196,80,26,0.2);">✦</div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-bar container">
-    <span class="hero-bar-label">Collaborated with</span>
-    <div class="hero-bar-orgs">
-      <span class="hero-bar-org">18F / GSA</span>
-      <span class="hero-bar-org">CDC</span>
-      <span class="hero-bar-org">HHS</span>
-      <span class="hero-bar-org">NIH</span>
-      <span class="hero-bar-org">Space Force</span>
-      <span class="hero-bar-org">Vote.gov</span>
-      <span class="hero-bar-org">NRDC</span>
-    </div>
-  </div>
-</section>
-
-<!-- ─── WORK ──────────────────────────────────────────── -->
-<section id="work">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow">Selected Work</div>
-      <h2 class="section-title">Systems at <em>scale</em></h2>
-    </div>
-  </div>
-
-  <div class="work-grid reveal" style="max-width:var(--max-w); margin: 0 auto; padding: 0 var(--gutter);">
-
-    <!-- USWDS — Featured full-width -->
-    <a href="https://designsystem.digital.gov/" class="work-card work-card--featured">
-      <div class="work-card-inner">
-        <img
-          src="assets/uswds.png"
-          alt="U.S. Web Design System"
-          class="work-card-img"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        >
-        <div class="work-card-placeholder" style="display:none; background: linear-gradient(135deg, #1b1b1b 0%, #2d2d2d 40%, #162e52 100%);">✦</div>
-        <div class="work-card-overlay">
-          <div class="work-meta-bar">
-            <span class="work-meta-scope">Design system · Federal digital services</span>
-            <span class="work-meta-divider">·</span>
-            <span class="work-meta-role">Front-end lead · Core components</span>
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Design systems · Design technology · AI</p>
+          <h1>Design systems that make product decisions <em>legible at scale.</em></h1>
+          <p class="lede">I design and lead systems that shape how teams build, decide, and scale products. From launching the U.S. Web Design System to enterprise platforms, my work turns design systems into operational infrastructure across complex organizations.</p>
+          <div class="actions">
+            <a class="button primary" href="#work">View work <span aria-hidden="true">↓</span></a>
+            <a class="button text" href="#about">About me <span aria-hidden="true">→</span></a>
           </div>
-          <h3 class="work-card-title">U.S. Web Design System</h3>
-          <div class="work-meta-impact">100+ agencies · 1B+ page views annually</div>
-          <p class="work-card-desc">Built core components and helped shape long-term system architecture, designed for decade-long durability across the federal government.</p>
         </div>
-        <div class="work-card-arrow">→</div>
-      </div>
-    </a>
 
-    <!-- Enterprise DS -->
-    <a href="mailto:hello@maya-benari.com" class="work-card">
-      <div class="work-card-inner">
-        <img
-          src="assets/enterprise-design-system.png"
-          alt="Enterprise Design System"
-          class="work-card-img"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        >
-        <div class="work-card-placeholder" style="display:none; background: linear-gradient(135deg, #1a2332 0%, #2c3e55 50%, #1e3a5f 100%);">◈</div>
-        <div class="work-card-overlay">
-          <div class="work-meta-bar">
-            <span class="work-meta-scope">Multi-product enterprise system</span>
+        <div class="hero-system reveal" aria-label="Diagram showing layers from foundations to decisions">
+          <div class="spectral-glow"></div>
+          <div class="layer layer-1"><span>Foundations</span></div>
+          <div class="layer layer-2"><span>Components</span></div>
+          <div class="layer layer-3"><span>Patterns</span></div>
+          <div class="layer layer-4"><span>Decisions</span></div>
+          <div class="axis-line axis-a"></div>
+          <div class="axis-line axis-b"></div>
+          <div class="dot dot-a"></div><div class="dot dot-b"></div><div class="dot dot-c"></div>
+        </div>
+      </section>
+
+      <section class="collaborators band reveal" aria-label="Organizations Maya has collaborated with">
+        <span class="band-label">Collaborated with</span>
+        <div class="orgs">
+          <span>18F</span><span>GSA</span><span>CDC</span><span>HHS</span><span>NIH</span><span>SPACE FORCE</span><span>VOTE.GOV</span><span>NRDC</span>
+        </div>
+      </section>
+
+      <section id="work" class="work section-pad">
+        <div class="section-heading reveal">
+          <p class="section-index">02 / Selected work</p>
+          <a href="#writing">View the broader body of work <span aria-hidden="true">→</span></a>
+        </div>
+
+        <article class="feature-project reveal">
+          <div class="artifact uswds-artifact" aria-hidden="true">
+            <div class="artifact-topbar"><span>USWDS</span><span>Components · Patterns · Guidance</span></div>
+            <div class="artifact-grid">
+              <div>
+                <p class="artifact-kicker">Standards for federal websites and digital services</p>
+                <div class="artifact-search">Search components, patterns, guidance <span>⌕</span></div>
+              </div>
+              <div class="artifact-stack">
+                <span class="ui-chip chip-blue">Primary</span>
+                <span class="ui-chip">Input</span>
+                <span class="ui-chip">Alert</span>
+                <span class="ui-chip">Navigation</span>
+              </div>
+            </div>
           </div>
-          <h3 class="work-card-title">Enterprise Design System</h3>
-          <div class="work-meta-role-line">Lead, foundations & system architecture</div>
-          <div class="work-meta-impact">30+ product teams · Token system and component architecture</div>
-          <p class="work-card-desc">Led foundational DS work at a global HR and payroll platform — component architecture, token systems, and contribution models across multiple product teams.<span class="work-card-request">Case study available upon request →</span></p>
-        </div>
-        <div class="work-card-arrow">→</div>
-      </div>
-    </a>
-
-    <!-- Accessibility for Teams -->
-    <a href="https://digital.gov/guides/accessibility-for-teams" target="_blank" class="work-card">
-      <div class="work-card-inner">
-        <img
-          src="assets/a11y.png"
-          alt="Accessibility for Teams"
-          class="work-card-img"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-        >
-        <div class="work-card-placeholder" style="display:none; background: linear-gradient(135deg, #1c2b1e 0%, #2d4a32 50%, #1e3a2a 100%);">⊕</div>
-        <div class="work-card-overlay">
-          <div class="work-meta-bar">
-            <span class="work-meta-scope">Org-wide accessibility practice</span>
+          <div class="project-copy">
+            <p class="meta">01 · Design system · Federal digital services</p>
+            <h2>U.S. Web Design System</h2>
+            <p class="impact">100+ agencies · 1B+ page views annually</p>
+            <p>Built core components and helped shape long-term system architecture designed for durability across the federal government.</p>
+            <a class="arrow-link" href="https://designsystem.digital.gov/" target="_blank" rel="noreferrer">Explore USWDS <span aria-hidden="true">↗</span></a>
           </div>
-          <h3 class="work-card-title">Accessibility for Teams</h3>
-          <div class="work-meta-role-line">Design systems + accessibility leadership</div>
-          <div class="work-meta-impact">5 practice areas · Adopted across design, engineering, and product</div>
-          <p class="work-card-desc">Defined and launched a role-based accessibility guide operationalizing inclusive design across design, engineering, and product teams.</p>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="artifact enterprise-artifact" aria-hidden="true">
+              <div class="token-rail">
+                <span>FOUNDATIONS</span><span>TOKENS</span><span>COMPONENTS</span><span>PATTERNS</span><span>GOVERNANCE</span>
+              </div>
+              <div class="token-canvas">
+                <div class="token-row"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="code-card">--space-4<br>--color-accent<br>--radius-md</div>
+                <div class="component-mini">Button <b>Primary</b></div>
+              </div>
+            </div>
+            <div class="project-card-copy">
+              <p class="meta">02 · Multi-product enterprise system</p>
+              <h3>Enterprise Design System</h3>
+              <p class="impact">Lead, foundations & system architecture</p>
+              <p>Component architecture, token systems, and contribution models spanning 30+ product teams.</p>
+              <a class="arrow-link" href="mailto:hello@maya-benari.com">Case study available upon request <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="artifact accessibility-artifact" aria-hidden="true">
+              <div class="access-type">Aa</div>
+              <div class="access-map">
+                <span class="person p1">DESIGN</span>
+                <span class="person p2">ENG</span>
+                <span class="person p3">PRODUCT</span>
+                <span class="center-check">✓</span>
+              </div>
+              <div class="access-notes">
+                <span>Inclusive by default</span>
+                <span>Built into the workflow</span>
+                <span>Role-based practice</span>
+              </div>
+            </div>
+            <div class="project-card-copy">
+              <p class="meta">03 · Org-wide accessibility practice</p>
+              <h3>Accessibility for Teams</h3>
+              <p class="impact">5 practice areas · Cross-functional adoption</p>
+              <p>Operationalized inclusive design across design, engineering, and product through role-based guidance.</p>
+              <a class="arrow-link" href="https://digital.gov/guides/accessibility-for-teams" target="_blank" rel="noreferrer">View the guide <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
         </div>
-        <div class="work-card-arrow">→</div>
-      </div>
-    </a>
+      </section>
 
-  </div>
-</section>
+      <section id="about" class="about section-pad">
+        <div class="about-intro reveal">
+          <p class="section-index">03 / About</p>
+          <h2>Systems as <em>decision infrastructure.</em></h2>
+          <p class="pullquote">Design systems aren’t just UI. They’re decision-making systems.</p>
+          <p>I work at the intersection of design, engineering, and systems thinking, building the structures that determine how products are made. I’m particularly interested in where systems go next: AI-assisted workflows, tighter design-to-code pipelines, and new forms of system intelligence that make design logic explicit, traceable, and scalable.</p>
+        </div>
 
-<!-- ─── ABOUT ─────────────────────────────────────────── -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-left reveal">
-        <img
-          src="assets/mb-photo.png"
-          alt="Maya Benari"
-          class="about-portrait"
-          
-        >
-        <div class="about-portrait-placeholder" style="display:none;">✦</div>
+        <div class="capabilities reveal">
+          <div class="capability">
+            <span class="cap-icon">◇</span>
+            <h3>Design systems & infrastructure</h3>
+            <p>Architecture & long-term strategy</p>
+            <p>Audits & system evolution</p>
+            <p>Patterns for complex products</p>
+          </div>
+          <div class="capability">
+            <span class="cap-icon">&lt;/&gt;</span>
+            <h3>Design ↔ Engineering</h3>
+            <p>Token systems & component APIs</p>
+            <p>Design-to-code translation</p>
+            <p>Production fidelity</p>
+          </div>
+          <div class="capability">
+            <span class="cap-icon">◎</span>
+            <h3>System adoption & scale</h3>
+            <p>Governance & enablement</p>
+            <p>Documentation strategy</p>
+            <p>Contribution models</p>
+          </div>
+          <div class="capability">
+            <span class="cap-icon">✦</span>
+            <h3>System intelligence</h3>
+            <p>AI-augmented workflows</p>
+            <p>Design-to-code pipelines</p>
+            <p>Explicit, traceable design logic</p>
+          </div>
+        </div>
+      </section>
 
-        <div class="about-links">
-          <a href="https://www.smashingmagazine.com/2017/10/large-scale-design-system-us-government" target="_blank" class="about-link">
-            Smashing Magazine <span>Article →</span>
+      <section id="writing" class="writing section-pad">
+        <div class="section-heading reveal">
+          <p class="section-index">04 / Writing</p>
+          <a href="https://www.notion.so/Writing-and-speaking-1bd9ad6b0d418037bc18f1fb95273920" target="_blank" rel="noreferrer">View full archive <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="writing-list">
+          <a class="writing-row reveal" href="https://www.smashingmagazine.com/2017/10/large-scale-design-system-us-government/" target="_blank" rel="noreferrer">
+            <span class="num">01</span>
+            <span class="title">Building a Large-Scale Design System for the U.S. Government</span>
+            <span class="source">Smashing Magazine · 2017</span>
+            <span class="go">↗</span>
           </a>
-          <a href="https://clarityconf.com/people/maya-benari" target="_blank" class="about-link">
-            Clarity Conference <span>Talk →</span>
+          <a class="writing-row reveal" href="https://designsystem.digital.gov/whats-new/updates/2019/04/08/introducing-uswds-2-0/" target="_blank" rel="noreferrer">
+            <span class="num">02</span>
+            <span class="title">Introducing USWDS 2.0: Reinvent the experience, not the wheel</span>
+            <span class="source">USWDS / Digital.gov · 2019</span>
+            <span class="go">↗</span>
           </a>
-          <a href="https://shoptalkshow.com/209-with-maya-benari-and-hillary-hartley/" target="_blank" class="about-link">
-            ShopTalk Show <span>Podcast →</span>
+          <a class="writing-row reveal" href="https://preserved.org.uk/18f.gsa.gov/2015/09/28/web-design-standards/index.html" target="_blank" rel="noreferrer">
+            <span class="num">03</span>
+            <span class="title">Introducing the U.S. Web Design Standards</span>
+            <span class="source">18F · 2015</span>
+            <span class="go">↗</span>
           </a>
-          <a href="https://raw.githubusercontent.com/maya/maya.github.io/master/assets/netmag-interview.png" target="_blank" class="about-link">
-            net magazine <span>Press →</span>
+          <a class="writing-row reveal" href="https://preserved.org.uk/18f.gsa.gov/2018/07/10/introducing-accessibility-for-teams/index.html" target="_blank" rel="noreferrer">
+            <span class="num">04</span>
+            <span class="title">Introducing Accessibility for Teams</span>
+            <span class="source">18F · 2018</span>
+            <span class="go">↗</span>
+          </a>
+          <a class="writing-row reveal" href="https://preserved.org.uk/18f.gsa.gov/2016/04/01/developing-the-draft-us-web-design-standards-ui-components/index.html" target="_blank" rel="noreferrer">
+            <span class="num">05</span>
+            <span class="title">Developing the Draft U.S. Web Design Standards’ UI Components</span>
+            <span class="source">18F · 2016</span>
+            <span class="go">↗</span>
           </a>
         </div>
-      </div>
+      </section>
 
-      <div class="about-right reveal reveal-delay-1">
-        <div class="section-eyebrow">About</div>
-        <h2 class="section-title" style="margin-bottom: 32px;">Systems as<br><em>decision infrastructure</em></h2>
-
-        <p class="about-bio">
-          Design systems aren’t just UI — they’re decision-making systems.
-        </p>
-        <div class="about-body">
-          <p>I work at the intersection of design, engineering, and systems thinking — building the structures that determine how products are made.</p>
-          <p>I've focused on design systems as infrastructure: not just component libraries, but systems that shape how organizations operate. Most recently, I led foundational design system work at a global HR and payroll platform, shaping component architecture, token systems, and contribution models used across multiple product teams. My role spanned design and front-end development, driving alignment between design intent and production reality.</p>
-          <p>Previously, I was a front-end lead on the U.S. Web Design System, where I built core components designed for decade-long durability — now serving 1B+ page views across hundreds of federal agencies.</p>
-          <p>I'm particularly interested in where systems are going next: AI-assisted workflows, tighter design-to-code pipelines, and new forms of system intelligence that make design logic explicit, traceable, and scalable.</p>
+      <section id="speaking" class="speaking section-pad">
+        <div class="section-heading reveal">
+          <p class="section-index">05 / Speaking</p>
         </div>
-
-        <div class="expertise-grid">
-          <div class="expertise-item">
-            <div class="expertise-label">Design systems & infrastructure</div>
-            <ul class="expertise-list">
-              <li>Architecture & long-term strategy</li>
-              <li>Audits & system evolution</li>
-              <li>Patterns for complex products</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-label">Design ↔ Engineering</div>
-            <ul class="expertise-list">
-              <li>Token systems & component APIs</li>
-              <li>Design-to-code translation</li>
-              <li>Production fidelity</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-label">System adoption & scale</div>
-            <ul class="expertise-list">
-              <li>Governance & enablement</li>
-              <li>Documentation strategy</li>
-              <li>Contribution models</li>
-            </ul>
-          </div>
-          <div class="expertise-item">
-            <div class="expertise-label">System intelligence</div>
-            <ul class="expertise-list">
-              <li>AI-augmented design workflows</li>
-              <li>Design-to-code pipelines</li>
-              <li>Explicit, traceable design logic</li>
-            </ul>
-          </div>
+        <div class="appearances">
+          <a class="appearance reveal" href="https://www.clarityconf.com/person/maya-benari" target="_blank" rel="noreferrer"><span>Conference talk</span><strong>Clarity Conference</strong><small>Design systems at scale</small></a>
+          <a class="appearance reveal" href="https://shoptalkshow.com/209-with-maya-benari-and-hillary-hartley/" target="_blank" rel="noreferrer"><span>Podcast</span><strong>ShopTalk Show</strong><small>Designers & systems thinking</small></a>
+          <a class="appearance reveal" href="http://styleguides.io/podcast/maya-benari/" target="_blank" rel="noreferrer"><span>Podcast</span><strong>Style Guides Podcast</strong><small>Design systems in practice</small></a>
+          <a class="appearance reveal" href="https://bigwebshow.fireside.fm/136" target="_blank" rel="noreferrer"><span>Interview</span><strong>The Big Web Show</strong><small>Building for the public good</small></a>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Maya Benari</span>
+      <a href="mailto:hello@maya-benari.com">hello@maya-benari.com</a>
+      <div><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/maya" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    </footer>
   </div>
-</section>
 
-<!-- ─── WRITING ────────────────────────────────────────── -->
-<section id="writing">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow">Writing</div>
-      <h2 class="section-title">On design,<br>systems, <em>&amp; scale</em></h2>
-    </div>
-
-    <div class="writing-list reveal reveal-delay-1">
-      <a href="https://www.smashingmagazine.com/2017/10/large-scale-design-system-us-government" target="_blank" class="writing-item"><span class="writing-num" aria-hidden="true">01</span><div class="writing-content">
-          <div class="writing-title">Building a Large-Scale Design System for the U.S. Government</div>
-          <div class="writing-meta">Smashing Magazine · 2017</div>
-        </div>      <span class="writing-arrow" aria-hidden="true">→</span></a>
-      <a href="https://designsystem.digital.gov/whats-new/updates/2019/04/08/introducing-uswds-2-0" target="_blank" class="writing-item"><span class="writing-num" aria-hidden="true">02</span><div class="writing-content">
-          <div class="writing-title">Introducing USWDS 2.0: Reinvent the experience, not the wheel</div>
-          <div class="writing-meta">USWDS / Digital.gov · 2019</div>
-        </div>      <span class="writing-arrow" aria-hidden="true">→</span></a>
-      <a href="https://preserved.org.uk/18f.gsa.gov/2015/09/28/web-design-standards/index.html" target="_blank" class="writing-item"><span class="writing-num" aria-hidden="true">03</span><div class="writing-content">
-          <div class="writing-title">Introducing the U.S. Web Design Standards</div>
-          <div class="writing-meta">18F · 2015</div>
-        </div>      <span class="writing-arrow" aria-hidden="true">→</span></a>
-      <a href="https://preserved.org.uk/18f.gsa.gov/2018/07/10/introducing-accessibility-for-teams/index.html" target="_blank" class="writing-item"><span class="writing-num" aria-hidden="true">04</span><div class="writing-content">
-          <div class="writing-title">Introducing Accessibility for Teams</div>
-          <div class="writing-meta">18F · 2018</div>
-        </div>      <span class="writing-arrow" aria-hidden="true">→</span></a>
-      <a href="https://preserved.org.uk/18f.gsa.gov/2016/04/01/developing-the-draft-us-web-design-standards-ui-components/index.html" target="_blank" class="writing-item"><span class="writing-num" aria-hidden="true">05</span><div class="writing-content">
-          <div class="writing-title">Developing the Draft U.S. Web Design Standards' UI Components</div>
-          <div class="writing-meta">18F · 2016</div>
-        </div>      <span class="writing-arrow" aria-hidden="true">→</span></a>
-    </div>
-
-    <div style="margin-top: 48px; text-align: center;" class="reveal reveal-delay-2">
-      <a href="https://www.notion.so/Writing-and-speaking-1bd9ad6b0d418037bc18f1fb95273920" target="_blank" class="btn btn-ghost">View full archive →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ─── SPEAKING ───────────────────────────────────────── -->
-<section id="speaking">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-eyebrow">Speaking</div>
-      <h2 class="section-title">Talks &amp; <em>appearances</em></h2>
-    </div>
-
-    <div class="speaking-grid reveal reveal-delay-1">
-      <a href="https://www.clarityconf.com/person/maya-benari" target="_blank" class="speaking-card">
-        <div class="speaking-type">Conference Talk</div>
-        <div class="speaking-venue">Clarity Conference</div>
-        <div class="speaking-detail">Design systems conference</div>
-      </a>
-      <a href="https://shoptalkshow.com/209-with-maya-benari-and-hillary-hartley/" target="_blank" class="speaking-card">
-        <div class="speaking-type">Podcast</div>
-        <div class="speaking-venue">ShopTalk Show</div>
-        <div class="speaking-detail">Episode 209 with Hillary Hartley</div>
-      </a>
-      <a href="http://styleguides.io/podcast/maya-benari/" target="_blank" class="speaking-card">
-        <div class="speaking-type">Podcast</div>
-        <div class="speaking-venue">Style Guides Podcast</div>
-        <div class="speaking-detail">Design systems & style guides</div>
-      </a>
-      <a href="https://bigwebshow.fireside.fm/136" target="_blank" class="speaking-card">
-        <div class="speaking-type">Interview</div>
-        <div class="speaking-venue">The Big Web Show</div>
-        <div class="speaking-detail">Episode 136 with Jeffrey Zeldman</div>
-      </a>
-      <div class="speaking-card">
-        <div class="speaking-type">Civic Tech Event</div>
-        <div class="speaking-venue">NASA</div>
-        <div class="speaking-detail">Civic technology & government design</div>
-      </div>
-      <a href="https://raw.githubusercontent.com/maya/maya.github.io/master/assets/netmag-interview.png" target="_blank" class="speaking-card">
-        <div class="speaking-type">Press</div>
-        <div class="speaking-venue">net magazine</div>
-        <div class="speaking-detail">Interview on transforming government websites</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ─── FOOTER ─────────────────────────────────────────── -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-wordmark">Maya <span>Benari</span></div>
-    <ul class="footer-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="https://www.linkedin.com/in/mayab/" target="_blank">Contact</a></li>
-    </ul>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/mayab/" target="_blank" aria-label="LinkedIn" class="footer-social-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <a href="https://github.com/maya/" target="_blank" aria-label="GitHub" class="footer-social-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  reveals.forEach(el => observer.observe(el));
-
-  // Hamburger menu toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  // Close menu when a link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
-    });
-  });
-  window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 40
-      ? '0 1px 24px rgba(28,26,23,0.08)'
-      : 'none';
-  });
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
