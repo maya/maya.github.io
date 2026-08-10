@@ -44,13 +44,13 @@ h1 em,h2 em{font-weight:400;font-style:italic;background:linear-gradient(90deg,v
   radial-gradient(circle at 42% 68%,rgba(23,105,255,.34),transparent 28%),
   radial-gradient(circle at 55% 50%,rgba(138,92,255,.26),transparent 44%);
   filter:blur(38px);z-index:-2}
-.layer{position:absolute;width:66%;height:40%;left:17%;border:1px solid rgba(62,58,76,.16);
+.layer{position:absolute;width:66%;height:40%;left:17%;border:1px solid rgba(36,31,51,.58);
   background:
-  linear-gradient(rgba(36,31,51,.06) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(36,31,51,.06) 1px,transparent 1px),
+  linear-gradient(rgba(36,31,51,.14) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(36,31,51,.14) 1px,transparent 1px),
   linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.05));
   background-size:32px 32px,32px 32px,auto;
-  transform:rotateX(66deg) rotateZ(-15deg);box-shadow:0 30px 60px rgba(71,50,115,.09);backdrop-filter:blur(2px)}
+  transform:rotateX(66deg) rotateZ(-15deg);box-shadow:0 30px 60px rgba(71,50,115,.15);backdrop-filter:blur(2px)}
 .layer:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,transparent 20%,var(--layer-color),transparent 82%);opacity:.48}
 .layer-1{top:51%;--layer-color:rgba(23,105,255,.65)}
 .layer-2{top:39%;--layer-color:rgba(100,83,255,.64)}
