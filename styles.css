@@ -33,6 +33,7 @@ nav a:hover:after{right:0}
 h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.03em;margin:0}
 h1{font-size:clamp(56px,5.4vw,92px);line-height:.95;max-width:790px}
 h1 em,h2 em{font-weight:400;font-style:italic;background:linear-gradient(90deg,var(--pink),var(--violet),var(--blue));-webkit-background-clip:text;color:transparent}
+.decision-line{display:inline-block;padding-right:.08em}
 .lede{font-size:17px;line-height:1.65;max-width:660px;color:#34343c;margin:30px 0 0}
 .actions{display:flex;align-items:center;gap:12px;margin-top:32px}
 .button{display:inline-flex;gap:20px;align-items:center;padding:14px 18px;font-size:14px;border-radius:5px}
